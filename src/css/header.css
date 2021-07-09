@@ -124,7 +124,7 @@
 #header_bottom {
   background-color: white;
   position: relative;
-  z-index: 50;
+  border-bottom: 1px solid transparent;
 }
 #header_bottom .warpper {
   height: 100px;
@@ -151,48 +151,6 @@
 }
 #header_bottom .nav > li:hover .sub_nav {
   top: 100px;
-}
-#header_bottom .nav > li .sub_nav {
-  border-top: 1px solid #e0e0e0;
-  background-color: rebeccapurple;
-  position: absolute;
-  z-index: 5;
-  transition: all 0.5s;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  top: -140px;
-  left: 0;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-}
-#header_bottom .nav > li .sub_nav a {
-  height: 230px;
-  font-size: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10px;
-}
-#header_bottom .nav > li .sub_nav a img {
-  height: 105px;
-  width: auto;
-  box-sizing: border-box;
-}
-#header_bottom .nav > li .sub_nav a p {
-  margin-top: 20px;
-}
-#header_bottom .nav > li .sub_nav a i {
-  color: #ff6a00;
-}
-#header_bottom .nav > li .sub_nav .line {
-  border-left: 1px solid #e0e0e0;
-  height: 100px;
-  margin-top: 35px;
-  display: inline-block;
-}
-#header_bottom .nav > li .sub_nav li:nth-last-child(1) img {
-  border-right: none;
 }
 #header_bottom .search {
   display: flex;
@@ -221,4 +179,61 @@
 #header_bottom .search > a .icon-gouwuchekong {
   color: #666;
   font-size: 20px;
+}
+#header_bottom #sub_nav_box {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  left: 0;
+  top: 101px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+#header_bottom:hover {
+  border-bottom: 1px solid #e0e0e0;
+}
+#header_bottom:hover #sub_nav_box {
+  height: 230px;
+}
+#header_bottom .sub_nav {
+  position: absolute;
+  z-index: 5;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#header_bottom .sub_nav a {
+  height: 230px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+#header_bottom .sub_nav a img {
+  height: 105px;
+  width: auto;
+  box-sizing: border-box;
+}
+#header_bottom .sub_nav a p {
+  margin-top: 20px;
+  color: #333;
+}
+#header_bottom .sub_nav a i {
+  color: #ff6a00;
+}
+#header_bottom .sub_nav .line {
+  border-left: 1px solid #e0e0e0;
+  height: 100px;
+  margin-top: 35px;
+  display: inline-block;
+}
+#header_bottom .sub_nav li:nth-last-child(1) img {
+  border-right: none;
 }

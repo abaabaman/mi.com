@@ -1,0 +1,159 @@
+@headerTopColor:#aaa;
+@xiaomiColor:hsl(25, 100%, 50%);
+@fontcolor:#616161;
+@border:1px solid #e0e0e0;
+@box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+@box-shadowS: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+
+.footer_top{
+    height: 332px;
+    background-color: white;
+    #service{
+        display: flex;
+        justify-content: space-around;
+        height: 80px;
+        border-bottom: @border;
+        li{
+            flex: 1;
+            display: flex;
+            text-align: center;
+            a{
+                color: @fontcolor;
+                border-right: @border;
+                line-height: 25px;
+                margin: auto;
+                width: 100%;
+                transition: all .2s;
+                span{
+                    font-size: 16px;
+                }
+                .iconfont{
+                    font-size: 26px;
+                    margin-right: 5px;
+                }
+                &:hover{
+                    color: @xiaomiColor;
+                }
+            }
+            &:nth-last-child(1) a{
+                border-right: none;
+            }
+        }
+    }
+    #more{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        .link{
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            li{
+                width: 100%;
+                h4{
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                    color: #424242;
+                }
+                a{
+                    display: block;
+                    font-size: 12px;
+                    line-height: 26px;
+                    color: #757575;
+                    &:hover{
+                        color: @xiaomiColor;
+                    }
+                }
+            }
+        }
+        .contact{
+            width: 20%;
+            border-left: @border;
+            text-align: center;
+            height: 110px;
+            h4{
+                font-size: 20px;
+                color: @xiaomiColor;
+            }
+            p{
+                color: @fontcolor;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            .manual_service{
+                color: @xiaomiColor;
+                border: 1px solid @xiaomiColor;
+                cursor: pointer;
+                width: 120px;
+                line-height: 30px;
+                display: inline-block;
+                font-size: 12px;
+                transition: all .5s;
+                &:hover{
+                    background-color: @xiaomiColor;
+                    color: white;
+                }
+            }
+            p{
+                .iconfont{
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+.footer_bottom{
+    height: 170px;
+    background-color: #fafafa;
+    padding-top: 30px;
+    .warpper{
+        display: flex;
+        color: #757575;
+        font-size: 12px;
+        a{
+            font-size: 12px;
+            color: #757575;
+            line-height: 14px;
+            &:hover{
+                color: @xiaomiColor;
+            }
+        }
+        >img{
+            height: 56px;
+            width: auto;
+            margin-right: 10px;
+        }
+        .information{
+            .Affiliation li{
+                margin-top: 4px;
+                float: left;
+                line-height: 12px;
+                border-right: 1px solid #757575;
+                a{
+                    margin: 0 5px;
+                }
+                &:last-child{
+                    border-right: none;
+                }
+            }
+        }
+        p{
+            color: #b0b0b0;
+            margin-top: 3px;
+            margin-left: 5px;
+            a{
+                color: #b0b0b0;
+            }
+            img{
+                display: inline-block;
+                height: 28px;
+                width: auto;
+            }
+        }
+    }
+}
+.footer_slogan{
+    height: 78px;
+    background: url(../img/slogan2020.png) no-repeat scroll 50%;
+    background-color: #fafafa;
+}
