@@ -1,0 +1,219 @@
+@headerTopColor:#aaa;
+@xiaomiColor:#ff6a00;
+@box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+@box-shadowS: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+
+#header_top{
+    background-color: #333;
+    color: @headerTopColor;
+    height: 40px;
+    font-size: 12px;
+    // position: relative;
+    // z-index: 20;
+    a{color: @headerTopColor;}
+    a:hover{color: #fff;}
+    #sitemap{
+        float: left;
+        display: flex;
+        li{
+            color: #424242;
+        }
+        li>a{
+            margin:0 5px;
+            line-height: 40px;
+            padding: 12px 0;
+        }
+        li:nth-child(1) a{
+            margin-left: 0;
+        }
+        li:nth-child(11) a{
+            position: relative;
+            em{
+                box-shadow: @box-shadowS;
+                display: block;
+                position: absolute;
+                left: 15px;
+                z-index: 50;
+                bottom: 0;
+                border: 8px solid transparent;
+                border-bottom-color: white;
+                display: none;
+            }
+            .Qr_code{
+                overflow: hidden;
+                position: absolute;
+                text-align: center;
+                left: -40px;
+                top: 40px;
+                height: 0;
+                width: 126px;
+                font-size: 14px;
+                transition: all .3s;
+                color: #333;
+                box-shadow: @box-shadow;
+                img{
+                    width: 86px;
+                    margin-left: 20px;
+                    margin-top: 20px;
+                }
+            }
+            &:hover{
+                em{display: block;}
+                .Qr_code{
+                    height: 150px;
+                }
+            }
+        }
+    }
+    #user{
+        float: right;
+        display: flex;
+        #login{
+            display: flex;
+            margin-right: 25px;
+            dd{
+                color: #424242;
+            }
+            dd>a{
+                margin:0 5px;
+                line-height: 40px;
+                padding: 12px 0;
+            }
+        }
+        #list{
+            width: 120px;
+            background-color: #424242;
+            line-height: 40px;
+            cursor: pointer;
+            position: relative;
+            .iconfont{
+                display: inline-block;
+                line-height: 16px;
+                margin-left: 20px;
+                margin-right: 5px;
+                transform: translateY(1px);
+            }
+            #sub_list{
+                width: 316px;
+                position: absolute;
+                right: 0;
+                top: -60px;
+                box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.15);
+                transition: top .5s;
+                z-index: -5;
+                background-color: #fff;
+                p{
+                    line-height: 100px;
+                    text-align: center;
+                    color: #424242;
+                }
+            }
+            &:hover{
+                background-color: white;
+                color: @xiaomiColor;
+                #sub_list{
+                    top: 40px;
+                }
+            }
+        }
+    }
+}
+#header_bottom{
+    border-bottom: 1px solid #e0e0e0;
+    background-color: white;
+    position: relative;
+    z-index: -15;
+    .warpper{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    img{
+        width: 56px;
+        height: 56px;
+        &:active{
+            transform: scale(.9);
+        }
+    }
+    .nav{
+        display: flex;
+        justify-content: start;
+        >li{
+            >a{
+                padding: 0 5px;
+                color: #333;
+                font-size: 15px;
+            }
+            .sub_nav{
+                position: absolute;
+                z-index: -25;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                top: 100px;
+                left: 0;
+                box-shadow: @box-shadow;
+                a{
+                    height: 230px;
+                    font-size: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 10px;
+                    img{
+                        height: 105px;
+                        width: auto;
+                        box-sizing: border-box;
+                    }
+                    p{
+                        margin-top: 20px;
+                    }
+                    i{
+                        color: @xiaomiColor;
+                    }
+                }
+                .line{
+                    border-left:1px solid #e0e0e0;
+                    height: 100px;
+                    margin-top: 35px;
+                    display: inline-block;
+                }
+                li:nth-last-child(1){
+                    img{
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+    .search{
+        display: flex;
+        input{
+            display: block;
+            box-sizing: border-box;
+            border: 1px solid #e0e0e0;
+            border-right: none;
+            height: 50px;
+            width: 235px;
+            line-height: 50px;
+            padding-left: 10px;
+        }
+        >a{
+            display: block;
+            box-sizing: border-box;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+            color: #000;
+            background-color: white;
+            .icon-gouwuchekong{
+                color: #666;
+                font-size: 20px;
+            }
+        }
+    }
+}

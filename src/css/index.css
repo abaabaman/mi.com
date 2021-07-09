@@ -1,0 +1,216 @@
+@charset "utf-8";
+#header_top {
+  background-color: #333;
+  color: #aaa;
+  height: 40px;
+  font-size: 12px;
+}
+#header_top a {
+  color: #aaa;
+}
+#header_top a:hover {
+  color: #fff;
+}
+#header_top #sitemap {
+  float: left;
+  display: flex;
+}
+#header_top #sitemap li {
+  color: #424242;
+}
+#header_top #sitemap li > a {
+  margin: 0 5px;
+  line-height: 40px;
+  padding: 12px 0;
+}
+#header_top #sitemap li:nth-child(1) a {
+  margin-left: 0;
+}
+#header_top #sitemap li:nth-child(11) a {
+  position: relative;
+}
+#header_top #sitemap li:nth-child(11) a em {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  display: block;
+  position: absolute;
+  left: 15px;
+  z-index: 50;
+  bottom: 0;
+  border: 8px solid transparent;
+  border-bottom-color: white;
+  display: none;
+}
+#header_top #sitemap li:nth-child(11) a .Qr_code {
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  left: -40px;
+  top: 40px;
+  height: 0;
+  width: 126px;
+  font-size: 14px;
+  transition: all 0.3s;
+  color: #333;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+}
+#header_top #sitemap li:nth-child(11) a .Qr_code img {
+  width: 86px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+#header_top #sitemap li:nth-child(11) a:hover em {
+  display: block;
+}
+#header_top #sitemap li:nth-child(11) a:hover .Qr_code {
+  height: 150px;
+}
+#header_top #user {
+  float: right;
+  display: flex;
+}
+#header_top #user #login {
+  display: flex;
+  margin-right: 25px;
+}
+#header_top #user #login dd {
+  color: #424242;
+}
+#header_top #user #login dd > a {
+  margin: 0 5px;
+  line-height: 40px;
+  padding: 12px 0;
+}
+#header_top #user #list {
+  width: 120px;
+  background-color: #424242;
+  line-height: 40px;
+  cursor: pointer;
+  position: relative;
+}
+#header_top #user #list .iconfont {
+  display: inline-block;
+  line-height: 16px;
+  margin-left: 20px;
+  margin-right: 5px;
+  transform: translateY(1px);
+}
+#header_top #user #list #sub_list {
+  width: 316px;
+  position: absolute;
+  right: 0;
+  top: -60px;
+  box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.15);
+  transition: top 0.5s;
+  z-index: -5;
+  background-color: #fff;
+}
+#header_top #user #list #sub_list p {
+  line-height: 100px;
+  text-align: center;
+  color: #424242;
+}
+#header_top #user #list:hover {
+  background-color: white;
+  color: #ff6a00;
+}
+#header_top #user #list:hover #sub_list {
+  top: 40px;
+}
+#header_bottom {
+  border-bottom: 1px solid #e0e0e0;
+  background-color: white;
+  position: relative;
+  z-index: -15;
+}
+#header_bottom .warpper {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header_bottom img {
+  width: 56px;
+  height: 56px;
+}
+#header_bottom img:active {
+  transform: scale(0.9);
+}
+#header_bottom .nav {
+  display: flex;
+  justify-content: start;
+}
+#header_bottom .nav > li > a {
+  padding: 0 5px;
+  color: #333;
+  font-size: 15px;
+}
+#header_bottom .nav > li .sub_nav {
+  position: absolute;
+  z-index: -25;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 100px;
+  left: 0;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+}
+#header_bottom .nav > li .sub_nav a {
+  height: 230px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+#header_bottom .nav > li .sub_nav a img {
+  height: 105px;
+  width: auto;
+  box-sizing: border-box;
+}
+#header_bottom .nav > li .sub_nav a p {
+  margin-top: 20px;
+}
+#header_bottom .nav > li .sub_nav a i {
+  color: #ff6a00;
+}
+#header_bottom .nav > li .sub_nav .line {
+  border-left: 1px solid #e0e0e0;
+  height: 100px;
+  margin-top: 35px;
+  display: inline-block;
+}
+#header_bottom .nav > li .sub_nav li:nth-last-child(1) img {
+  border-right: none;
+}
+#header_bottom .search {
+  display: flex;
+}
+#header_bottom .search input {
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  border-right: none;
+  height: 50px;
+  width: 235px;
+  line-height: 50px;
+  padding-left: 10px;
+}
+#header_bottom .search > a {
+  display: block;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  color: #000;
+  background-color: white;
+}
+#header_bottom .search > a .icon-gouwuchekong {
+  color: #666;
+  font-size: 20px;
+}
+main {
+  height: 3000px;
+}

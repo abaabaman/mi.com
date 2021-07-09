@@ -1,0 +1,16 @@
+{
+  "name": "xiaomi",
+  "version": "1.0.0",
+  "description": "小米官网选择性临摹",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-less": "^5.0.0"
+  }
+}
