@@ -3,12 +3,17 @@
   color: #aaa;
   height: 40px;
   font-size: 12px;
+  position: relative;
+  z-index: 100;
 }
 #header_top a {
   color: #aaa;
 }
 #header_top a:hover {
   color: #fff;
+}
+#header_top .warpper {
+  background-color: #333;
 }
 #header_top #sitemap {
   float: left;
@@ -51,6 +56,7 @@
   transition: all 0.3s;
   color: #333;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+  background-color: white;
 }
 #header_top #sitemap li:nth-child(11) a .Qr_code img {
   width: 86px;
@@ -97,8 +103,8 @@
   width: 316px;
   position: absolute;
   right: 0;
-  top: -60px;
-  box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.15);
+  top: -80px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
   transition: top 0.5s;
   z-index: -5;
   background-color: #fff;
@@ -116,10 +122,9 @@
   top: 40px;
 }
 #header_bottom {
-  border-bottom: 1px solid #e0e0e0;
   background-color: white;
   position: relative;
-  z-index: -15;
+  z-index: 50;
 }
 #header_bottom .warpper {
   height: 100px;
@@ -137,21 +142,28 @@
 #header_bottom .nav {
   display: flex;
   justify-content: start;
+  margin-left: 100px;
 }
 #header_bottom .nav > li > a {
-  padding: 0 5px;
+  padding: 0 10px;
   color: #333;
-  font-size: 15px;
+  font-size: 16px;
+}
+#header_bottom .nav > li:hover .sub_nav {
+  top: 100px;
 }
 #header_bottom .nav > li .sub_nav {
+  border-top: 1px solid #e0e0e0;
+  background-color: rebeccapurple;
   position: absolute;
-  z-index: -25;
+  z-index: 5;
+  transition: all 0.5s;
   display: flex;
   justify-content: center;
   width: 100%;
-  top: 100px;
+  top: -140px;
   left: 0;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 #header_bottom .nav > li .sub_nav a {
   height: 230px;
