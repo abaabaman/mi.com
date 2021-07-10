@@ -238,9 +238,6 @@
 #header_bottom .sub_nav li:nth-last-child(1) img {
   border-right: none;
 }
-main {
-  height: 2000px;
-}
 main .banner {
   height: 460px;
   background-color: burlywood;
@@ -408,6 +405,132 @@ main .news_release img {
 }
 main .news_release img:hover {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+main .seckill {
+  background-color: #f5f5f5;
+}
+main .seckill .seckill_main {
+  height: 340px;
+  display: flex;
+}
+main .seckill .seckill_main #seckill {
+  width: 235px;
+  background-color: #f1eded;
+  border-top: 1px solid red;
+  margin-right: 14px;
+  padding-top: 60px;
+  text-align: center;
+}
+main .seckill .seckill_main #seckill h4 {
+  color: #e7221b;
+  font-size: 22px;
+}
+main .seckill .seckill_main #seckill span {
+  color: #e53934;
+  font-size: 56px;
+  line-height: 116px;
+}
+main .seckill .seckill_main #seckill p {
+  color: #706f6f;
+  font-size: 14px;
+  line-height: 18px;
+}
+main .seckill .seckill_main #seckill em {
+  font-size: 20px;
+  line-height: 80px;
+  color: #81736a;
+}
+main .seckill .seckill_main #seckill em i {
+  padding: 5px 6px;
+  margin: 0 2px;
+  background-color: #605751;
+  color: white;
+}
+main .seckill .seckill_main .products_banner {
+  flex: 1;
+  overflow: hidden;
+}
+main .seckill .seckill_main .products_banner ul.products_content {
+  width: 2000px;
+  height: 100%;
+  display: flex;
+}
+main .seckill .seckill_main .products_banner ul.products_content li > a {
+  width: 235px;
+  display: block;
+  height: 100%;
+  margin-right: 12px;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+main .seckill .seckill_main .products_banner ul.products_content li > a img {
+  height: 120px;
+  width: auto;
+  margin-bottom: 40px;
+  margin-top: 25px;
+}
+main .seckill .seckill_main .products_banner ul.products_content li > a p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  margin-top: 10px;
+}
+main .seckill .seckill_main .products_banner ul.products_content li > a p em {
+  color: hsl(25, 100%, 50%);
+}
+main .seckill .seckill_main .products_banner ul.products_content li > a p i {
+  text-decoration: line-through;
+  color: #aaa;
+}
+main .seckill .seckill_main .products_banner ul.products_content li > a span {
+  font-size: 12px;
+  color: #aaa;
+}
+main .seckill .seckill_main .products_banner ul.products_content li:nth-of-type(odd) a {
+  border-top: 1px solid red;
+}
+main .seckill .seckill_main .products_banner ul.products_content li:nth-of-type(even) a {
+  border-top: 1px solid #1e9b1e;
+}
+main .module_header {
+  line-height: 62px;
+  position: relative;
+}
+main .module_header h3 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+main .module_header .next {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  line-height: 24px;
+  height: 24px;
+  width: 70px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+}
+main .module_header .next a {
+  flex: 1;
+  text-align: center;
+  color: #b0b0b0;
+}
+main .module_header .next a:hover {
+  color: hsl(25, 100%, 50%);
+}
+main .module_header .next a:first-child {
+  border-right: 1px solid #e0e0e0;
+}
+main .module_banner {
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 18px;
+}
+main .module_banner img {
+  width: 100%;
 }
 .footer_top {
   height: 332px;

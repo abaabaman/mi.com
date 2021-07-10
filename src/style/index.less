@@ -11,7 +11,6 @@
 @import url(./header.less);
 
 main{
-    height: 2000px;
     .banner{
         height: 460px;
         background-color: burlywood;
@@ -182,6 +181,127 @@ main{
                 box-shadow: @box-shadowB
             }
         }
+    }
+    .seckill{
+        background-color: #f5f5f5;
+        .seckill_main{
+            height: 340px;
+            display: flex;
+            #seckill{
+                .onebox();
+                background-color: #f1eded;
+                border-top: 1px solid red;
+                margin-right: 14px;
+                padding-top: 60px;
+                text-align: center;
+                h4{
+                    color: #e7221b;
+                    font-size: 22px;
+    
+                }
+                span{
+                    color: #e53934;
+                    font-size: 56px;
+                    line-height: 116px;
+                }
+                p{
+                    color: #706f6f;
+                    font-size: 14px; 
+                    line-height: 18px; 
+                }
+                em{
+                    font-size: 20px;
+                    line-height: 80px;
+                    color: #81736a;
+                    i{
+                        padding: 5px 6px;
+                        margin: 0 2px;
+                        background-color: #605751;
+                        color: white;
+                    }
+                }
+            }
+            .products_banner{
+                flex: 1;
+                overflow: hidden;
+                ul.products_content{
+                    width: 2000px;
+                    height: 100%;
+                    display: flex;
+                    li>a{
+                        .onebox();
+                        display: block;
+                        height: 100%;
+                        margin-right: 12px;
+                        background-color: white;
+                        display: flex;
+                        flex-flow: column;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                            height: 120px;
+                            width: auto;
+                            margin-bottom: 40px;
+                            margin-top: 25px;
+                        }
+                        p{
+                            font-size: 14px;
+                            line-height: 20px;
+                            color: #333;
+                            margin-top: 10px;
+                            em{
+                                color: @xiaomiColor;
+                            }
+                            i{
+                                text-decoration:line-through;
+                                color: #aaa;
+                            }
+                        }
+                        span{font-size: 12px;color: #aaa;}
+                        
+                    }
+                    & li:nth-of-type(odd) a{border-top: 1px solid red;}
+                    & li:nth-of-type(even) a{border-top: 1px solid rgb(30, 155, 30);}
+                }
+            }
+        }
+    }
+    .module_header{
+        line-height: 62px;
+        position: relative;
+        h3{
+            font-size: 20px;
+            font-weight: lighter;
+        }
+        .next{
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+            line-height: 24px;
+            height: 24px;
+            width: 70px;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            a{
+                flex: 1;
+                text-align: center;
+                color: #b0b0b0;
+                
+                &:hover{
+                    color: @xiaomiColor;
+                }
+            }
+            a:first-child{
+                border-right: 1px solid #e0e0e0;
+            }
+        }
+    }
+    
+    .module_banner{
+        display: block;
+        padding-top: 22px;
+        padding-bottom: 18px;
+        img{width: 100%;}
     }
 }
 
