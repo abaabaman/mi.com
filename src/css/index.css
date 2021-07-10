@@ -240,7 +240,6 @@
 }
 main {
   height: 2000px;
-  background-color: powderblue;
 }
 main .banner {
   height: 460px;
@@ -256,6 +255,7 @@ main .banner .banner_top {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 15;
   display: flex;
 }
 main .banner .banner_top .banner_nav {
@@ -267,7 +267,7 @@ main .banner .banner_top .banner_nav {
 }
 main .banner .banner_top .banner_nav a {
   display: block;
-  line-height: 40px;
+  line-height: 43px;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -319,6 +319,7 @@ main .banner .banner_top .banner_slide {
   flex: 1;
   display: flex;
   align-items: center;
+  z-index: -5;
   justify-content: space-between;
 }
 main .banner .banner_top .banner_slide span {
@@ -335,13 +336,14 @@ main .banner .banner_top .banner_slide span:hover {
   background-color: #7b7b7b;
   color: white;
 }
-main .banner .banner_click {
+main .banner .banner_top .banner_click {
   position: absolute;
   right: 35px;
   bottom: 25px;
   cursor: default;
+  z-index: -5;
 }
-main .banner .banner_click em {
+main .banner .banner_top .banner_click em {
   display: inline-block;
   box-sizing: border-box;
   width: 10px;
@@ -351,8 +353,61 @@ main .banner .banner_click em {
   background-color: #777;
   cursor: pointer;
 }
-main .banner .banner_click em:hover {
+main .banner .banner_top .banner_click em:hover {
   background-color: #ddd;
+}
+main .news_release {
+  height: 170px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+main .news_release .channel {
+  width: 235px;
+  height: 100%;
+  background-color: #5f5750;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+main .news_release .channel a {
+  display: block;
+  width: 73px;
+  height: 60px;
+  padding-top: 18px;
+  color: #cccccc;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+main .news_release .channel a span {
+  font-size: 25px;
+}
+main .news_release .channel a p {
+  font-size: 12px;
+  line-height: 24px;
+}
+main .news_release .channel a:hover {
+  color: white;
+}
+main .news_release .channel a::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: -75px;
+  left: -7px;
+  width: 14px;
+  height: 12px;
+  background-color: #5f5750;
+}
+main .news_release img {
+  height: 100%;
+  transition: all 0.5s;
+}
+main .news_release img:hover {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 .footer_top {
   height: 332px;
