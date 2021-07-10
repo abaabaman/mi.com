@@ -1,5 +1,130 @@
 @charset "utf-8";
+
+@headerTopColor:#aaa;
+@xiaomiColor:#ff6a00;
+@border:1px solid #e0e0e0;
+@box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+@box-shadowS: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+
 @import url(./header.less);
-main{height: 10px;background-color: powderblue;}
+
+main{
+    height: 2000px;
+    background-color: powderblue;
+    .banner{
+        height: 460px;
+        background-color: burlywood;
+        position: relative;
+        >img{
+            width: 100%;
+        }
+        .banner_top{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            .banner_nav{
+                background: rgba(119, 119, 119, 0.5);
+                width: 235px;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                a{
+                    display: block;
+                    line-height: 40px;
+                    color: white;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 25px 0 30px;
+                    font-size: 14px;
+                    & :last-child{
+                        color: rgba(255, 255, 255, 0.8);
+                    }
+                }
+                &>li:hover{
+                    background-color: @xiaomiColor;
+                    .banner_subnav{display: flex;}
+                }
+                >li:nth-child(3) .banner_subnav{
+                    width: 690px;
+                }
+                .banner_subnav{
+                    background-color: white;
+                    position: absolute;
+                    left: 235px;
+                    top: 0;
+                    width: 990px;
+                    height: 100%;
+                    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, .5);
+                    display: flex;
+                    flex-flow: column;
+                    flex-wrap: wrap;
+                    align-content: start;
+                    display: none;
+                    li{
+                        height: (100%/6);
+                        width: (990px/4);
+                        display: flex;
+                        align-items: center;
+                    }
+                    a{
+                        img{
+                            height: 40px;
+                        }
+                        span{
+                            color: #333;
+                        }
+                        &:hover span{
+                            color: @xiaomiColor;
+                        }
+                    }
+                    
+                }
+            }
+            .banner_slide{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                span{
+                    width: 40px;
+                    line-height: 70px;
+                    text-align: center;
+                    cursor: pointer;
+                    color: #ddd;
+                    &:last-child{
+                        transform: rotate(180deg);
+                    }
+                    &:hover{
+                        background-color: #7b7b7b;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .banner_click{
+            position: absolute;
+            right: 35px;
+            bottom:  25px;
+            cursor: default;
+            em{
+                display: inline-block;
+                box-sizing: border-box;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 2px solid #999;
+                background-color: #777;
+                cursor:pointer;
+                &:hover{
+                    background-color: #ddd;
+                }
+            }
+            
+        }
+    }
+}
 
 @import url(./footer.less);
