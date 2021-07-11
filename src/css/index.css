@@ -156,6 +156,12 @@
 #header_bottom .search {
   display: flex;
 }
+#header_bottom .search:focus-within input {
+  border-color: hsl(25, 100%, 50%);
+}
+#header_bottom .search:focus-within > a {
+  border-color: hsl(25, 100%, 50%);
+}
 #header_bottom .search input {
   display: block;
   box-sizing: border-box;
@@ -165,6 +171,7 @@
   width: 235px;
   line-height: 50px;
   padding-left: 10px;
+  transition: border-color 0.3s;
 }
 #header_bottom .search > a {
   display: block;
@@ -176,6 +183,7 @@
   text-align: center;
   color: #000;
   background-color: white;
+  transition: border-color 0.3s;
 }
 #header_bottom .search > a .icon-gouwuchekong {
   color: #666;
@@ -532,6 +540,7 @@ main .seckill .seckill_main .products_banner ul.products_content {
 }
 main .seckill .seckill_main .products_banner ul.products_content a {
   margin-right: 12px;
+  height: 100%;
 }
 main .seckill .seckill_main .products_banner ul.products_content li:nth-of-type(odd) a {
   border-top: 1px solid red;

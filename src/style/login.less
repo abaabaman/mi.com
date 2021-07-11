@@ -1,0 +1,75 @@
+@xiaomiColor:#ff6a00;
+
+html{height: 100%;}
+body{
+    display: flex;
+
+    height: 100%;
+    .login_bg{
+        width: 375px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        img{width: 100%;}
+    }
+    main{
+        flex:1;
+        overflow: auto;
+        header{
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            h2{
+                display: flex;
+                align-items: center;
+                img{height: 40px;}
+                span{font-size: 24px;font-weight: normal;margin-left: 10px;}
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                li{
+                    a{
+                        font-size: 14px;
+                        color: #838383;
+                        margin-right: 20px;
+                        transition: color .3s;
+                        &:hover{
+                            color: @xiaomiColor;
+                        }
+                    }
+                    &:last-child{
+                        border-left: 1px solid #ddd;
+                        line-height: 12px;
+                        a{
+                            margin: 0 20px;
+                            line-height: 14px;
+                            i{
+                                display: inline-block;
+                                border: 5px solid transparent;
+                                border-top-color: #838383;
+                                margin-left: 8px;
+                                transform: translateY(3px);
+                                transition: transform .2s;
+                            }
+                            &:hover i{
+                                transform: rotate(-180deg) translateY(2px);
+                                border-top-color: @xiaomiColor;
+                            }
+                        }
+                    }
+                }
+                dl{display: none;}
+            }
+        }
+        form{
+            width: 450px;
+            margin: 0 auto;
+            height: 2000px;
+            background-color: pink;
+        }
+    }
+}

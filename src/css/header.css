@@ -155,6 +155,12 @@
 #header_bottom .search {
   display: flex;
 }
+#header_bottom .search:focus-within input {
+  border-color: #ff6a00;
+}
+#header_bottom .search:focus-within > a {
+  border-color: #ff6a00;
+}
 #header_bottom .search input {
   display: block;
   box-sizing: border-box;
@@ -164,6 +170,7 @@
   width: 235px;
   line-height: 50px;
   padding-left: 10px;
+  transition: border-color 0.3s;
 }
 #header_bottom .search > a {
   display: block;
@@ -175,6 +182,7 @@
   text-align: center;
   color: #000;
   background-color: white;
+  transition: border-color 0.3s;
 }
 #header_bottom .search > a .icon-gouwuchekong {
   color: #666;

@@ -1,0 +1,82 @@
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  height: 100%;
+}
+body .login_bg {
+  width: 375px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+body .login_bg img {
+  width: 100%;
+}
+body main {
+  flex: 1;
+  overflow: auto;
+}
+body main header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+body main header h2 {
+  display: flex;
+  align-items: center;
+}
+body main header h2 img {
+  height: 40px;
+}
+body main header h2 span {
+  font-size: 24px;
+  font-weight: normal;
+  margin-left: 10px;
+}
+body main header ul {
+  display: flex;
+  align-items: center;
+}
+body main header ul li a {
+  font-size: 14px;
+  color: #838383;
+  margin-right: 20px;
+  transition: color 0.3s;
+}
+body main header ul li a:hover {
+  color: #ff6a00;
+}
+body main header ul li:last-child {
+  border-left: 1px solid #ddd;
+  line-height: 12px;
+}
+body main header ul li:last-child a {
+  margin: 0 20px;
+  line-height: 14px;
+}
+body main header ul li:last-child a i {
+  display: inline-block;
+  border: 5px solid transparent;
+  border-top-color: #838383;
+  margin-left: 8px;
+  transform: translateY(3px);
+  transition: transform 0.2s;
+}
+body main header ul li:last-child a:hover i {
+  transform: rotate(-180deg) translateY(2px);
+  border-top-color: #ff6a00;
+}
+body main header ul dl {
+  display: none;
+}
+body main form {
+  width: 450px;
+  margin: 0 auto;
+  height: 2000px;
+  background-color: pink;
+}

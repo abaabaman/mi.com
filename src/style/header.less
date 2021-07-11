@@ -161,6 +161,10 @@
     }
     .search{
         display: flex;
+        &:focus-within{
+            input{border-color: @xiaomiColor;}
+            >a{border-color: @xiaomiColor;}
+        }
         input{
             display: block;
             box-sizing: border-box;
@@ -170,6 +174,7 @@
             width: 235px;
             line-height: 50px;
             padding-left: 10px;
+            transition: border-color .3s;
         }
         >a{
             display: block;
@@ -181,6 +186,7 @@
             text-align: center;
             color: #000;
             background-color: white;
+            transition: border-color .3s;
             .icon-gouwuchekong{
                 color: #666;
                 font-size: 20px;
