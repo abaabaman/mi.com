@@ -1,5 +1,6 @@
 #sidebar {
   position: fixed;
+  z-index: 50;
   right: 0;
   bottom: 9%;
 }
@@ -25,18 +26,23 @@
 #sidebar li:first-child {
   border-top: 1px solid #f5f5f5;
 }
+#sidebar li:first-child:hover .Qr_code {
+  display: flex;
+  transition: all 0.3s;
+}
 #sidebar li:hover {
   color: #ff6a00;
 }
 #sidebar li .Qr_code {
   position: absolute;
+  display: none;
   right: 100px;
   top: 0;
   width: 130px;
   height: 190px;
+  line-height: 22px;
   border: 1px solid #f5f5f5;
   background-color: white;
-  display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -46,6 +52,21 @@
 }
 #sidebar li .Qr_code p {
   width: 80px;
+  color: #757575;
+  margin-top: 10px;
+}
+#sidebar li .Qr_code i {
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  background-color: white;
+  right: -8px;
+  top: 40px;
+  transform: rotate(45deg);
+  border: 1px solid #f5f5f5;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
 }
 #sidebar li#top {
   margin-top: 16px;
