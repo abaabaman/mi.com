@@ -1,0 +1,56 @@
+#sidebar {
+  position: fixed;
+  right: 0;
+  bottom: 9%;
+}
+#sidebar li {
+  box-sizing: border-box;
+  width: 85px;
+  height: 90px;
+  text-align: center;
+  background-color: white;
+  color: #999;
+  border: 1px solid #f5f5f5;
+  border-top: none;
+  transition: color 0.3s;
+  padding-top: 18px;
+}
+#sidebar li span {
+  font-size: 26px;
+}
+#sidebar li p {
+  font-size: 14px;
+  margin-top: 8px;
+}
+#sidebar li:first-child {
+  border-top: 1px solid #f5f5f5;
+}
+#sidebar li:hover {
+  color: #ff6a00;
+}
+#sidebar li .Qr_code {
+  position: absolute;
+  right: 100px;
+  top: 0;
+  width: 130px;
+  height: 190px;
+  border: 1px solid #f5f5f5;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+#sidebar li .Qr_code img {
+  width: 95px;
+}
+#sidebar li .Qr_code p {
+  width: 80px;
+}
+#sidebar li#top {
+  margin-top: 16px;
+  border-top: 1px solid #f5f5f5;
+}
+#sidebar li#top.none {
+  display: none;
+}

@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-@headerTopColor:#aaa;
 @xiaomiColor:#ff6a00;
 @border:1px solid #e0e0e0;
 .onebox(@one:235px){width: @one;}
@@ -9,6 +8,7 @@
 @box-shadowS: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
 
 @import url(./header.less);
+@import url(./sidebar.less);
 
 main{
     .banner{
@@ -287,6 +287,19 @@ main{
                     }
                 }
             }
+            .option{
+                cursor: pointer;
+                span{
+                    border-bottom: 2px solid transparent;
+                    margin-left: 25px;
+                    transition: all .3s;
+                    &.on,&:hover{
+                        border-color: @xiaomiColor;
+                        color: @xiaomiColor;
+                    }
+                }
+                
+            }
         }
         .module_main{
             display: flex;
@@ -378,5 +391,6 @@ main{
         }
     }
 }
+
 
 @import url(./footer.less);

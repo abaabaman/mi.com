@@ -238,6 +238,62 @@
 #header_bottom .sub_nav li:nth-last-child(1) img {
   border-right: none;
 }
+#sidebar {
+  position: fixed;
+  right: 0;
+  bottom: 9%;
+}
+#sidebar li {
+  box-sizing: border-box;
+  width: 85px;
+  height: 90px;
+  text-align: center;
+  background-color: white;
+  color: #999;
+  border: 1px solid #f5f5f5;
+  border-top: none;
+  transition: color 0.3s;
+  padding-top: 18px;
+}
+#sidebar li span {
+  font-size: 26px;
+}
+#sidebar li p {
+  font-size: 14px;
+  margin-top: 8px;
+}
+#sidebar li:first-child {
+  border-top: 1px solid #f5f5f5;
+}
+#sidebar li:hover {
+  color: hsl(25, 100%, 50%);
+}
+#sidebar li .Qr_code {
+  position: absolute;
+  right: 100px;
+  top: 0;
+  width: 130px;
+  height: 190px;
+  border: 1px solid #f5f5f5;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+#sidebar li .Qr_code img {
+  width: 95px;
+}
+#sidebar li .Qr_code p {
+  width: 80px;
+}
+#sidebar li#top {
+  margin-top: 16px;
+  border-top: 1px solid #f5f5f5;
+}
+#sidebar li#top.none {
+  display: none;
+}
 main .banner {
   height: 460px;
   background-color: burlywood;
@@ -513,6 +569,19 @@ main section .module_header .more a span {
 }
 main section .module_header .more a:hover,
 main section .module_header .more a:hover span {
+  color: hsl(25, 100%, 50%);
+}
+main section .module_header .option {
+  cursor: pointer;
+}
+main section .module_header .option span {
+  border-bottom: 2px solid transparent;
+  margin-left: 25px;
+  transition: all 0.3s;
+}
+main section .module_header .option span.on,
+main section .module_header .option span:hover {
+  border-color: hsl(25, 100%, 50%);
   color: hsl(25, 100%, 50%);
 }
 main section .module_main {
