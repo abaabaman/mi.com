@@ -10,26 +10,51 @@
     <title>登录</title>
 </head>
 <body>
+    <!-- 左侧背景图 -->
     <div class="login_bg"><img src="../img/login_bg.jpg" alt=""></div>
     <main>
+        <!-- 顶部logo和帮助 -->
         <header>
             <h2><img src="../img/logo-mi2.png"><span>小米账号</span></h2>
             <ul id="help">
                 <li><a href="">用户协议</a></li>
                 <li><a href="">隐私政策</a></li>
                 <li><a href="">帮助中心</a></li>
+                <em>&nbsp</em>
                 <li>
                     <a href="">中文(简体)<i></i></a>
                     <dl>
-                        <dd>中文(繁体)</dd>
-                        <dd>English</dd>
+                        <dd><a href="">中文(繁体)</a></dd>
+                        <dd><a href="">English</a></dd>
                     </dl>
                 </li>
             </ul>
         </header>
-        <form action="#">
-            <button type="submit" id="loginbar"></button>
-        </form>
+        <!-- 登录/注册窗 -->
+        <div id="loginbar">
+            <div class="type_toggle"><span class="iconfont icon-gouwuchekong"></span></div>
+            <p class="login_toggle"><a href="">登录</a><a href="">注册</a></p>
+            <form action="#" id="login">
+                <input type="text" placeholder="邮箱/手机号/小米ID">
+                <input type="paseword" placeholder="密码"><span class="iconfont icon-gouwuchekong"></span>
+                <input type="submit" id="login_btn">
+                <p><a href="">忘记密码？</a><a href="">手机号登录</a></p>
+            </form>
+            <form action="#" id="register">
+                <input type="text" placeholder="邮箱/手机号/小米ID">
+                <input type="paseword" placeholder="密码">
+                <input type="submit" id="register_btn">
+            </form>
+            <dl id="more_type">
+                <dt>其他方式登录</dt>
+                <dd><a href=""><span class="iconfont icon-gouwuchekong"></span></a></dd>
+                <dd><a href=""><span class="iconfont icon-gouwuchekong"></span></a></dd>
+                <dd><a href=""><span class="iconfont icon-gouwuchekong"></span></a></dd>
+                <dd><a href=""><span class="iconfont icon-gouwuchekong"></span></a></dd>
+            </dl>
+        </div>
+        <!-- 备案信息 -->
+        <p>小米公司版权所有-京ICP备<a href="">10046444-京公网安备11010802020134号</a>-京ICP证110507号</p>
     </main>
 </body>
 </html>
