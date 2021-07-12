@@ -32,7 +32,7 @@
         </header>
         <!-- 登录/注册窗 -->
         <div id="loginbar">
-            <div id="type_toggle"><span class="iconfont icon-gouwuchekong"></span></div>
+            <div id="type_toggle"><span class="iconfont icon-gouwuchekong"></span><div class="title">扫码登录</div></div>
             <div id="login_toggle"><a href="" class="on">登录</a><a href="">注册</a><i></i></div>
             <form action="#" id="login">
                 <div class="username">
@@ -49,7 +49,7 @@
                 <input type="submit" id="login_btn" value="登录">
                 <p><a href="">忘记密码？</a><a href="">手机号登录</a></p>
             </form>
-            <form action="#" id="register" class="none">
+            <form action="#" id="register">
                 <div class="addr">
                     <select name="addr" id="">
                         <option value="">中国</option>
@@ -58,13 +58,19 @@
                     <span class="iconfont icon-gouwuchekong"></span>
                 </div>
                 <div class="phone">
-                    <select name="prefix" id="">
-                        <option value="">+86</option>
-                    </select>
-                    <span>国家码</span>
-                    <span class="iconfont icon-gouwuchekong"></span>
-                    <input type="text" name="phone">
-                    <span>手机号</span>
+                    <div id="phone_form">
+                        <div class="prefix">
+                            <select name="prefix" id="">
+                                <option value="">+86</option>
+                            </select>
+                            <span>国家码</span>
+                            <span class="iconfont icon-gouwuchekong"></span>
+                        </div>
+                        <div class="phone_number">
+                            <input type="text" name="phone">
+                            <span>手机号</span>
+                        </div>
+                    </div>
                     <p>请输入手机号码</p>
                 </div>
                 <div class="code">

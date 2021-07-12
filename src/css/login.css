@@ -63,10 +63,11 @@ body main header ul li a:hover {
 }
 body main header ul li:last-child {
   position: relative;
-  margin: 0 20px;
+  margin-left: 20px;
 }
 body main header ul li:last-child > a {
   line-height: 14px;
+  margin-right: 10px;
 }
 body main header ul li:last-child > a i {
   display: inline-block;
@@ -111,7 +112,7 @@ body main header ul dl dd a:hover {
 body main #loginbar {
   width: 450px;
   margin: 20px auto 60px;
-  height: 630px;
+  padding-bottom: 180px;
   border-radius: 5px;
   position: relative;
   box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.05);
@@ -125,7 +126,7 @@ body main #loginbar #type_toggle {
   width: 65px;
   height: 65px;
   text-align: center;
-  overflow: hidden;
+  cursor: pointer;
 }
 body main #loginbar #type_toggle span {
   line-height: 65px;
@@ -134,6 +135,34 @@ body main #loginbar #type_toggle span {
   right: -5px;
   top: -5px;
   color: white;
+}
+body main #loginbar #type_toggle .title {
+  position: absolute;
+  z-index: 500;
+  top: 10px;
+  right: 70px;
+  width: 82px;
+  height: 30px;
+  background-color: #ff6a00;
+  box-shadow: 0 2px 6px 0 #ff6a0055;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: scale(0.5) translateX(50px);
+}
+body main #loginbar #type_toggle .title::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  background-color: #ff6a00;
 }
 body main #loginbar #type_toggle::after {
   content: '';
@@ -146,11 +175,18 @@ body main #loginbar #type_toggle::after {
   bottom: -52px;
   left: -52px;
 }
+body main #loginbar #type_toggle:hover {
+  background-color: #ff6a00;
+}
+body main #loginbar #type_toggle:hover .title {
+  transform: scale(1);
+  opacity: 1;
+}
 body main #loginbar #login_toggle {
   text-align: left;
   padding-top: 50px;
   margin-left: 45px;
-  height: 80px;
+  height: 40px;
 }
 body main #loginbar #login_toggle a {
   font-size: 22px;
@@ -169,18 +205,33 @@ body main #loginbar #login_toggle i {
   border-radius: 2px;
   background-color: #ff6a00;
 }
-body main #loginbar form input {
+body main #loginbar form {
+  text-align: center;
+}
+body main #loginbar form input,
+body main #loginbar form select {
   box-sizing: border-box;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   width: 355px;
   height: 60px;
+  margin-top: 20px;
+  margin-bottom: 15px;
   padding-left: 20px;
   border-radius: 5px;
   background-color: #f9f9f9;
+  border: 1px solid transparent;
+  outline: 1px solid transparent;
+  padding-top: 20px;
+  font-size: 16px;
 }
-body main #loginbar form input[type='submit'] {
+body main #loginbar form input[type='submit'],
+body main #loginbar form select[type='submit'] {
   background-color: #ffbe99;
 }
-body main #loginbar form input[type='submit']:hover {
+body main #loginbar form input[type='submit']:hover,
+body main #loginbar form select[type='submit']:hover {
   background-color: #ffcba9;
 }
 body main #loginbar form > div {
@@ -188,11 +239,96 @@ body main #loginbar form > div {
 }
 body main #loginbar form > div span {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 20px;
+  left: 70px;
 }
-body main #loginbar form > div span:nth-child(3) {
-  background-color: #ff6a00;
+body main #loginbar form > div span:nth-of-type(1) {
+  font-size: 18px;
+  line-height: 60px;
+  color: #aaa;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+body main #loginbar form > div span:nth-of-type(2) {
+  color: #bbb;
+  line-height: 60px;
+  padding: 0 25px;
+  left: 331px;
+  font-size: 22px;
+  cursor: pointer;
+}
+body main #loginbar form > div span:nth-of-type(2):hover {
+  color: #898989;
+}
+body main #loginbar form > div p {
+  margin-left: 45px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: left;
+  color: #f04645;
+}
+body main #loginbar form > div #phone_form {
+  margin-top: -15px;
+  display: flex;
+  padding: 0 46px;
+}
+body main #loginbar form > div #phone_form .prefix {
+  background-color: orange;
+  width: 145px;
+}
+body main #loginbar form > div #phone_form .prefix select {
+  border-radius: 5px 0 0 5px;
+  width: 100%;
+  padding-left: 22px;
+}
+body main #loginbar form > div #phone_form .phone_number {
+  flex: 1;
+}
+body main #loginbar form > div #phone_form .phone_number input {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+  border-left: none;
+  box-shadow: none;
+  background-color: #f9f9f9;
+}
+body main #loginbar form > div #phone_form .phone_number span {
+  left: 210px;
+}
+body main #loginbar form > div #phone_form span:nth-of-type(2) {
+  left: 120px;
+}
+body main #loginbar form > div #phone_form span:nth-of-type(3) {
+  left: 200px;
+  line-height: 60px;
+  color: #959595;
+}
+body main #loginbar form > div:focus-within input,
+body main #loginbar form > div[class='addr'] input,
+body main #loginbar form > div .prefix input,
+body main #loginbar form > div:focus-within .phone_number input {
+  background-color: white;
+  border: 1px solid #ff5c00;
+  box-shadow: 0 0 0 1px #f9f9f9;
+  box-shadow: 0 0 0 2px #fcf2f3;
+}
+body main #loginbar form > div:focus-within span:nth-of-type(1),
+body main #loginbar form > div[class='addr'] span:nth-of-type(1),
+body main #loginbar form > div .prefix span:nth-of-type(1),
+body main #loginbar form > div:focus-within .phone_number span:nth-of-type(1) {
+  font-size: 12px;
+  line-height: 35px;
+  color: #aaa;
+}
+body main #loginbar form > p {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 45px;
+}
+body main #loginbar form > p a {
+  color: #ff6a00;
+}
+body main #loginbar form:nth-of-type(1) {
+  display: none;
 }
 body main #loginbar #more_type {
   position: absolute;
@@ -216,12 +352,12 @@ body main #loginbar #more_type dd a span {
 body main #loginbar #more_type dd:last-child {
   margin-right: 0;
 }
-body main p {
+body main > p {
   text-align: center;
   color: #999;
   font-size: 12px;
   line-height: 60px;
 }
-body main p a {
+body main > p a {
   color: #999;
 }
