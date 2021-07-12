@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+@xiaomiColor:#ff6a00;
+@box-shadowB: 0 15px 25px 0 rgba(0, 0, 0, 0.1);
+@import url(./header.less);
+@import url(./sidebar.less);
+#header_bottom .nav{margin-left: -20px;}
+main{
+    #details_top{
+        line-height: 63px;
+        height: 63px;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
+        position: relative;
+        .warpper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            i{padding: 0 10px;font-size: 14px;color: #ddd;}
+            a{color: #616161;font-size: 14px;&:hover{color: @xiaomiColor;}}
+            .products{
+                display: flex;
+                align-items: center;
+                em{font-size: 20px;}
+                a{font-size: 12px;}
+                i{font-size: 12px;color: #aaa;}
+            }
+            ul.page{display: flex;}
+        }
+    }
+    #details_main{
+        #details_show{
+            background-color: pink;
+        }
+    }
+    #price_state{
+        background-color: #f5f5f5;
+        height: 316px;
+        h4{
+            font-size: 24px;
+            line-height: 80px;
+        }
+    }
+}
+
+@import url(./footer.less);

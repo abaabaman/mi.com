@@ -320,9 +320,6 @@
   margin-top: 16px;
   border-top: 1px solid #f5f5f5;
 }
-#sidebar li#top.none {
-  display: none;
-}
 main .banner {
   height: 460px;
   background-color: burlywood;
