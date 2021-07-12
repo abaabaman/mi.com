@@ -1,6 +1,6 @@
 @xiaomiColor:#ff6a00;
 @box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
-@box-shadowB: 0 15px 25px 0 rgba(0, 0, 0, 0.05);
+@box-shadowB: 0 15px 25px 0 rgba(0, 0, 0, 0.03);
 
 .none{display: none;}
 
@@ -102,6 +102,7 @@ body{
         #loginbar{
             width: 450px;
             margin: 20px auto 60px;
+            padding-bottom: 150px;
             padding-bottom: 180px;
             border-radius: 5px;
             position: relative;
@@ -150,7 +151,6 @@ body{
                         height: 10px;
                         transform: rotate(45deg);
                         background-color: @xiaomiColor;
-
                     }
                 }
                 &::after{
@@ -199,9 +199,6 @@ body{
                 text-align: center;
                 input,select{
                     box-sizing: border-box;
-                    appearance:none;
-		            -moz-appearance:none;
-		            -webkit-appearance:none;
                     width: 355px;
                     height: 60px;
                     margin-top: 20px;
@@ -211,17 +208,25 @@ body{
                     background-color: #f9f9f9;
                     border: 1px solid transparent;
                     outline: 1px solid transparent;
-                    // background-color: #fcf2f3;
                     padding-top: 20px;
                     font-size: 16px;
                     &[type='submit']{
                         background-color: #ffbe99;
+                        color: white;
+                        padding: 0;
+                        font-size: 18px;
+                        line-height: 60px;
+                        transition: background-color .3s;
                         &:hover{background-color: #ffcba9;}
                     }
                 }
+                select{                        
+                    appearance:none;
+                    -moz-appearance:none;
+                    -webkit-appearance:none;
+                }
                 >div{
                     position: relative;
-                    
                     span{
                         position: absolute;
                         top: 20px;
@@ -243,6 +248,13 @@ body{
                             &:hover{color: #898989;}
                         }
                     }
+                    >a{
+                        position: absolute;
+                        right: 70px;
+                        top: 40px;
+                        font-size: 14px;
+                        color: @xiaomiColor;
+                    }
                     p{
                         margin-left: 45px;
                         font-size: 12px;
@@ -250,19 +262,85 @@ body{
                         text-align: left;
                         color: #f04645;
                     }
+                    &.addr{
+                        span:nth-of-type(1){
+                            font-size: 12px;
+                            line-height: 35px;
+                            color: #aaa;
+                        } 
+                        &:focus-within{
+                            .title{
+                                opacity: 1;
+                                transition: all .3s;
+                                transform: scale(1);
+                            }
+                        }
+                        .title{
+                            position: absolute;
+                            opacity: 0;
+                            z-index: 20;
+                            top: 15px;
+                            right: -245px;
+                            width: 275px;
+                            height: 70px;
+                            border-radius: 5px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: white;
+                            box-shadow: @box-shadow;
+                            transform: scale(.5) translateX(-200px);
+                            span:nth-of-type(1){
+                                position: static;
+                                color: @xiaomiColor;
+                                margin-right: 5px;
+                                margin-top: -20px;
+                                font-size: 16px;
+                            }
+                            span:nth-of-type(2){
+                                position: static;
+                                text-align: left;
+                                color: #333;
+                                font-size: 12px;
+                                width: 210px;
+                                line-height: 18px;
+                                padding: 0;
+                            }
+                            &::before{
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                background-color: white;
+                                transform: rotate(45deg);
+                                box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, 0.1);
+                                z-index: -5;
+                                left: -5px;
+                                top: 30px;
+                                width: 10px;
+                                height: 10px;
+                            }
+                        }
+                    } 
+                    
                     #phone_form{
                         margin-top: -15px;
                         display: flex;
                         padding: 0 46px;
                         .prefix{
-                            background-color: orange;
                             width: 145px;
                             select{
                                 border-radius: 5px 0 0 5px;
                                 width: 100%;
                                 padding-left: 22px;
+                                border-right: none;
+                            }
+                            span:nth-of-type(1){
+                                font-size: 12px;
+                                line-height: 35px;
+                                color: #aaa;
                             }
                         }
+                        
                         .phone_number{
                             flex: 1;
                             input{
@@ -270,7 +348,6 @@ body{
                                 border-radius: 0 5px 5px 0;
                                 border-left: none;
                                 box-shadow: none;
-                                background-color: #f9f9f9;
                             }
                             span{
                                 left: 210px;
@@ -285,8 +362,8 @@ body{
                             color: #959595;
                         }
                     }
-                    &:focus-within,&[class='addr'],& .prefix,&:focus-within .phone_number{
-                        input{
+                    &:focus-within,&:focus-within .phone_number{
+                        input,select{
                             background-color: white;
                             border: 1px solid #ff5c00;
                             box-shadow: 0 0 0 1px #f9f9f9;
@@ -305,6 +382,32 @@ body{
                     justify-content: space-between;
                     padding: 0 45px;
                     a{color: @xiaomiColor;}
+                }
+                #agree{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #aaa;
+                    font-size: 14px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    a{color: #333;margin: 0 5px;}
+                    i{
+                        display: inline-block;
+                        background-color: #f9f9f9;
+                        color: #f9f9f9;
+                        border: 1px solid #ddd;
+                        box-sizing: border-box;
+                        height: 20px;
+                        width: 20px;
+                        margin-right: 5px;
+                        border-radius: 5px;
+                        &:active{
+                            background-color: @xiaomiColor;
+                            color: white;
+                        }
+                    }
+
                 }
             }
             form:nth-of-type(1){
