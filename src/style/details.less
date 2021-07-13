@@ -6,6 +6,7 @@
 @import url(./sidebar.less);
 #header_bottom .nav{margin-left: -20px;}
 main{
+    // 顶部导航
     #details_top{
         line-height: 63px;
         height: 63px;
@@ -30,9 +31,11 @@ main{
             ul.page{display: flex;}
         }
     }
+    // 主体部分
     #details_main{
         margin-top: 30px;
         display: flex;
+        // 左侧缩略图
         #details_show{
             flex: 1;
             z-index: 5;
@@ -92,6 +95,7 @@ main{
                 }
             }
         }
+        // 右侧商品选择
         #details_select{
             flex: 1;
             margin-left: 20px;
@@ -171,19 +175,22 @@ main{
                         padding-top: 40px;
                         display: flex;
                         position: relative;
+                        cursor: pointer;
+                        border-bottom: none;
+                        &:last-child{border-bottom: 1px solid #e0e0e0;}
                         >i{
                             position: absolute;
                             font-size: 12px;
-                            width: 12px;
-                            height: 12px;
+                            width: 14px;
+                            height: 14px;
                             left: 50px;
                             top: 60px;
                             border-radius: 50%;
-                            border: 1px solid @xiaomiColor;
-                            span{display: block;;transform: scale(.65) translate(-2px,-3px)}
+                            border: 1px solid #b0b0b0;
+                            span{display: block;transform: scale(.7) translate(-1px,-2px);color: white;}
                         }
-                        img{height: 40px;}
-                        >span{position: absolute;right: 0;bottom: 0;color: #757575;}
+                        img{height: 40px;margin-right: 15px;}
+                        >span{position: absolute;right: 20px;bottom: 30px;color: #757575;}
                         .item_txt{
                             p{font-size: 20px;font-weight: bold;}
                             p>span{background-color: @xiaomiColor;color: white;line-height: 25px;border-radius: 12px;font-size: 14px;padding:2px 5px;margin-left: 3px;}
@@ -225,11 +232,56 @@ main{
                             }
                             
                         }
+                        &:focus-within{
+                            border: 1px solid @xiaomiColor;
+                            .item_txt>p{color: @xiaomiColor;}
+                            i{
+                                background-color: @xiaomiColor;
+                                border-color: @xiaomiColor;
+                            }
+                        }
                     }
                 }
             }
+            #total{
+                background-color: #f9f9fa;
+                color:#616161;
+                padding: 38px 28px;
+                margin: 30px 0;
+                p{display: flex;justify-content: space-between;}
+                p.total_version{font-size: 14px;i{text-decoration: line-through;margin-left: 5px;line-height: 28px;}}
+                p.total_price{font-size: 26px;color: @xiaomiColor;margin-top: 28px;}
+            }
+            button{
+                line-height: 54px;
+                border: none;
+                cursor: pointer;
+                color: white;
+                transition: background-color .3s;
+                &#add_menu{
+                    background-color: @xiaomiColor;margin-right: 10px;width: 300px;
+                    &:hover{background-color: darken(@xiaomiColor,5%);}
+                }
+                &#add_like{
+                    background-color: #b0b0b0;line-height: 52px;width: 142px;
+                    &:hover{background-color: darken(#b0b0b0,20%);}
+                }
+            }
+            ul.point{
+                padding: 20px 0;
+                display: flex;
+                flex-wrap: wrap;
+                line-height: 40px;
+                color: #b0b0b0;
+                li{margin-right: 10px;}
+            }
         }
     }
+    .details_content{
+        overflow: hidden;
+        img{margin-left: calc(50% - 1280px);}
+    } 
+    // 底部说明
     #price_state{
         background-color: #f5f5f5;
         height: 316px;
@@ -237,6 +289,7 @@ main{
             font-size: 24px;
             line-height: 80px;
         }
+        img{width: 100%;}
     }
 }
 

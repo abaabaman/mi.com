@@ -537,28 +537,35 @@ main #details_main #details_select section .item_select div.item_one {
   padding-top: 40px;
   display: flex;
   position: relative;
+  cursor: pointer;
+  border-bottom: none;
+}
+main #details_main #details_select section .item_select div.item_one:last-child {
+  border-bottom: 1px solid #e0e0e0;
 }
 main #details_main #details_select section .item_select div.item_one > i {
   position: absolute;
   font-size: 12px;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   left: 50px;
   top: 60px;
   border-radius: 50%;
-  border: 1px solid hsl(25, 100%, 50%);
+  border: 1px solid #b0b0b0;
 }
 main #details_main #details_select section .item_select div.item_one > i span {
   display: block;
-  transform: scale(0.65) translate(-2px, -3px);
+  transform: scale(0.7) translate(-1px, -2px);
+  color: white;
 }
 main #details_main #details_select section .item_select div.item_one img {
   height: 40px;
+  margin-right: 15px;
 }
 main #details_main #details_select section .item_select div.item_one > span {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 20px;
+  bottom: 30px;
   color: #757575;
 }
 main #details_main #details_select section .item_select div.item_one .item_txt p {
@@ -620,6 +627,78 @@ main #details_main #details_select section .item_select div.item_one .item_txt .
   margin: 0 2px;
   padding: 0 1px;
 }
+main #details_main #details_select section .item_select div.item_one:focus-within {
+  border: 1px solid hsl(25, 100%, 50%);
+}
+main #details_main #details_select section .item_select div.item_one:focus-within .item_txt > p {
+  color: hsl(25, 100%, 50%);
+}
+main #details_main #details_select section .item_select div.item_one:focus-within i {
+  background-color: hsl(25, 100%, 50%);
+  border-color: hsl(25, 100%, 50%);
+}
+main #details_main #details_select #total {
+  background-color: #f9f9fa;
+  color: #616161;
+  padding: 38px 28px;
+  margin: 30px 0;
+}
+main #details_main #details_select #total p {
+  display: flex;
+  justify-content: space-between;
+}
+main #details_main #details_select #total p.total_version {
+  font-size: 14px;
+}
+main #details_main #details_select #total p.total_version i {
+  text-decoration: line-through;
+  margin-left: 5px;
+  line-height: 28px;
+}
+main #details_main #details_select #total p.total_price {
+  font-size: 26px;
+  color: hsl(25, 100%, 50%);
+  margin-top: 28px;
+}
+main #details_main #details_select button {
+  line-height: 54px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s;
+}
+main #details_main #details_select button#add_menu {
+  background-color: hsl(25, 100%, 50%);
+  margin-right: 10px;
+  width: 300px;
+}
+main #details_main #details_select button#add_menu:hover {
+  background-color: hsl(25, 100%, 45%);
+}
+main #details_main #details_select button#add_like {
+  background-color: #b0b0b0;
+  line-height: 52px;
+  width: 142px;
+}
+main #details_main #details_select button#add_like:hover {
+  background-color: #7d7d7d;
+}
+main #details_main #details_select ul.point {
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 40px;
+  color: #b0b0b0;
+}
+main #details_main #details_select ul.point li {
+  margin-right: 10px;
+}
+main .details_content {
+  overflow: hidden;
+}
+main .details_content img {
+  margin-left: calc(50% - 1280px);
+}
 main #price_state {
   background-color: #f5f5f5;
   height: 316px;
@@ -627,6 +706,9 @@ main #price_state {
 main #price_state h4 {
   font-size: 24px;
   line-height: 80px;
+}
+main #price_state img {
+  width: 100%;
 }
 .footer_top {
   height: 332px;
