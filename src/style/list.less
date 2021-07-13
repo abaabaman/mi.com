@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+@xiaomiColor:#ff6a00;
+@box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+
+header{
+    border-bottom: 2px solid @xiaomiColor;
+    .warpper{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title{
+            display: flex;
+            img{width: 48px;height: 48px;;margin-right: 45px;}
+            p{font-size: 28px;line-height: 46px;}
+            span{color: #757575;font-size: 12px;margin-left: 15px;}
+        }
+        ul.user{
+            display: flex;
+            line-height: 20px;
+            i{font-size: 12px;color: #b0b0b0;margin-top: 2px;}
+            >li{
+                position: relative;
+                >a{
+                    font-size: 12px;
+                    color: #757575;
+                    padding: 0 15px;
+                    span{font-size: 12px;margin: 0 10px;}
+                }
+                &:hover{
+                    a{color: @xiaomiColor}
+                    ul.sub_user{height: 160px;padding-top: 10px}
+                } 
+            }
+            ul.sub_user{
+                position: absolute;
+                right: 0;
+                top: 30px;
+                background-color: #fff;
+                box-shadow: @box-shadow;
+                display: flex;
+                flex-flow: column;
+                text-align: center;
+                width: 112px;
+                height: 0;
+                overflow: hidden;
+                transition: all .3s;
+                a{
+                    display: block;
+                    font-size: 12px;
+                    line-height: 30px;
+                    color: #333;
+                    &:hover{
+                        background-color: #f5f5f5;
+                        color: @xiaomiColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#products_more{
+    background-color: #f5f5f5;
+    padding-top: 38px;
+    margin-top: 200px;
+    border-top: 1px solid #e0e0e0;
+    h2{
+        text-align: center;
+        display: block;
+        background-color: #f5f5f5;
+        color: #757575;
+        font-size: 30px;
+        width: 480px;
+        margin: 0 auto;
+        position: relative;
+        top: 20px;
+    }
+    ul.screenshot{
+        padding-top: 50px;
+        border-top: 1px solid #e0e0e0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li{
+            width: calc(20% - 14px);
+            background-color: white;
+        }
+    }
+}
+
+@import url(./footer.less);
