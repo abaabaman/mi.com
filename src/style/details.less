@@ -13,7 +13,7 @@ main{
         border-bottom: 1px solid #e0e0e0;
         box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
         position: relative;
-        z-index: 25;
+        z-index: 5;
         .warpper{
             display: flex;
             justify-content: space-between;
@@ -31,6 +31,7 @@ main{
         }
     }
     #details_main{
+        margin-top: 30px;
         display: flex;
         #details_show{
             flex: 1;
@@ -93,9 +94,9 @@ main{
         }
         #details_select{
             flex: 1;
-            margin-left: 44px;
+            margin-left: 20px;
             h3{
-                font-size: 26px;
+                font-size: 24px;
                 line-height: 52px;
             }
             p.state{
@@ -132,16 +133,25 @@ main{
                 }
             }
             section{
-                h4{line-height: 50px;font-size: 20px;}
+                .item_title{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h4{line-height: 50px;font-size: 18px;}
+                    a{font-size: 14px;color: @xiaomiColor;}
+                }
                 .item_select{
                     display: flex;
-                    a{
-                        flex: 1;
+                    flex-wrap: wrap;
+                    .item_one{
+                        border: 1px solid #e0e0e0;
+                    }
+                    a.item_one{
+                        flex: 48%;
                         text-align: center;
                         margin-bottom: 10px;
                         line-height: 42px;
                         color: #757575;
-                        border: 1px solid #e0e0e0;
                         &:nth-of-type(even){
                             margin-left: 12px;
                         }
@@ -152,6 +162,68 @@ main{
                         &.on{
                             color: @xiaomiColor;
                             border-color: @xiaomiColor;
+                        }
+                    }
+                    div.item_one{
+                        height: 110px;
+                        width: 100%;
+                        padding-left: 80px;
+                        padding-top: 40px;
+                        display: flex;
+                        position: relative;
+                        >i{
+                            position: absolute;
+                            font-size: 12px;
+                            width: 12px;
+                            height: 12px;
+                            left: 50px;
+                            top: 60px;
+                            border-radius: 50%;
+                            border: 1px solid @xiaomiColor;
+                            span{display: block;;transform: scale(.65) translate(-2px,-3px)}
+                        }
+                        img{height: 40px;}
+                        >span{position: absolute;right: 0;bottom: 0;color: #757575;}
+                        .item_txt{
+                            p{font-size: 20px;font-weight: bold;}
+                            p>span{background-color: @xiaomiColor;color: white;line-height: 25px;border-radius: 12px;font-size: 14px;padding:2px 5px;margin-left: 3px;}
+                            >span{font-size: 14px;color: #b0b0b0;line-height: 32px;}
+                            .agree{
+                                display: flex;align-items: center;
+                                input{
+                                    position: relative;
+                                    cursor: pointer;
+                                    &[type=checkbox]::after{
+                                        position: absolute;
+                                        top: -1px;
+                                        left: -2px;
+                                        background-color: white;
+                                        border: 1px solid #b0b0b0;
+                                        border-radius: 3px;
+                                        color: #fff;
+                                        width: 14px;
+                                        height: 14px;
+                                        display: inline-block;
+                                        visibility: visible;
+                                        text-align: center;
+                                        content: ' ';
+                                    }
+
+                                    &[type=checkbox]:checked::after{
+                                        position: relative;
+                                        content: "✓";
+                                        line-height: 14px;
+                                        font-size: 10px;
+                                        font-weight: bold;
+                                        background-color: @xiaomiColor;
+                                        border-color: @xiaomiColor;
+                                    }
+                                }
+                                span{font-size: 14px;margin-left: 3px;
+                                    a{color: @xiaomiColor;margin: 0 2px;padding: 0 1px;}
+                                }
+                            }
+                            
                         }
                     }
                 }

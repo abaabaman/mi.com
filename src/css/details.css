@@ -330,7 +330,7 @@ main #details_top {
   border-bottom: 1px solid #e0e0e0;
   box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
   position: relative;
-  z-index: 25;
+  z-index: 5;
 }
 main #details_top .warpper {
   display: flex;
@@ -367,6 +367,7 @@ main #details_top .warpper ul.page {
   display: flex;
 }
 main #details_main {
+  margin-top: 30px;
   display: flex;
 }
 main #details_main #details_show {
@@ -435,10 +436,10 @@ main #details_main #details_show .control .details_toggle span.on {
 }
 main #details_main #details_select {
   flex: 1;
-  margin-left: 44px;
+  margin-left: 20px;
 }
 main #details_main #details_select h3 {
-  font-size: 26px;
+  font-size: 24px;
   line-height: 52px;
 }
 main #details_main #details_select p.state {
@@ -491,31 +492,133 @@ main #details_main #details_select #user_addr .spot {
   margin-left: 33px;
   line-height: 28px;
 }
-main #details_main #details_select section h4 {
+main #details_main #details_select section .item_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #details_main #details_select section .item_title h4 {
   line-height: 50px;
-  font-size: 20px;
+  font-size: 18px;
+}
+main #details_main #details_select section .item_title a {
+  font-size: 14px;
+  color: hsl(25, 100%, 50%);
 }
 main #details_main #details_select section .item_select {
   display: flex;
+  flex-wrap: wrap;
 }
-main #details_main #details_select section .item_select a {
-  flex: 1;
+main #details_main #details_select section .item_select .item_one {
+  border: 1px solid #e0e0e0;
+}
+main #details_main #details_select section .item_select a.item_one {
+  flex: 48%;
   text-align: center;
   margin-bottom: 10px;
   line-height: 42px;
   color: #757575;
-  border: 1px solid #e0e0e0;
 }
-main #details_main #details_select section .item_select a:nth-of-type(even) {
+main #details_main #details_select section .item_select a.item_one:nth-of-type(even) {
   margin-left: 12px;
 }
-main #details_main #details_select section .item_select a:hover {
+main #details_main #details_select section .item_select a.item_one:hover {
   color: hsl(25, 100%, 50%);
   border-color: hsl(25, 100%, 50%);
 }
-main #details_main #details_select section .item_select a.on {
+main #details_main #details_select section .item_select a.item_one.on {
   color: hsl(25, 100%, 50%);
   border-color: hsl(25, 100%, 50%);
+}
+main #details_main #details_select section .item_select div.item_one {
+  height: 110px;
+  width: 100%;
+  padding-left: 80px;
+  padding-top: 40px;
+  display: flex;
+  position: relative;
+}
+main #details_main #details_select section .item_select div.item_one > i {
+  position: absolute;
+  font-size: 12px;
+  width: 12px;
+  height: 12px;
+  left: 50px;
+  top: 60px;
+  border-radius: 50%;
+  border: 1px solid hsl(25, 100%, 50%);
+}
+main #details_main #details_select section .item_select div.item_one > i span {
+  display: block;
+  transform: scale(0.65) translate(-2px, -3px);
+}
+main #details_main #details_select section .item_select div.item_one img {
+  height: 40px;
+}
+main #details_main #details_select section .item_select div.item_one > span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #757575;
+}
+main #details_main #details_select section .item_select div.item_one .item_txt p {
+  font-size: 20px;
+  font-weight: bold;
+}
+main #details_main #details_select section .item_select div.item_one .item_txt p > span {
+  background-color: hsl(25, 100%, 50%);
+  color: white;
+  line-height: 25px;
+  border-radius: 12px;
+  font-size: 14px;
+  padding: 2px 5px;
+  margin-left: 3px;
+}
+main #details_main #details_select section .item_select div.item_one .item_txt > span {
+  font-size: 14px;
+  color: #b0b0b0;
+  line-height: 32px;
+}
+main #details_main #details_select section .item_select div.item_one .item_txt .agree {
+  display: flex;
+  align-items: center;
+}
+main #details_main #details_select section .item_select div.item_one .item_txt .agree input {
+  position: relative;
+  cursor: pointer;
+}
+main #details_main #details_select section .item_select div.item_one .item_txt .agree input[type=checkbox]::after {
+  position: absolute;
+  top: -1px;
+  left: -2px;
+  background-color: white;
+  border: 1px solid #b0b0b0;
+  border-radius: 3px;
+  color: #fff;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  visibility: visible;
+  text-align: center;
+  content: ' ';
+}
+main #details_main #details_select section .item_select div.item_one .item_txt .agree input[type=checkbox]:checked::after {
+  position: relative;
+  content: "✓";
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: hsl(25, 100%, 50%);
+  border-color: hsl(25, 100%, 50%);
+}
+main #details_main #details_select section .item_select div.item_one .item_txt .agree span {
+  font-size: 14px;
+  margin-left: 3px;
+}
+main #details_main #details_select section .item_select div.item_one .item_txt .agree span a {
+  color: hsl(25, 100%, 50%);
+  margin: 0 2px;
+  padding: 0 1px;
 }
 main #price_state {
   background-color: #f5f5f5;
