@@ -13,6 +13,7 @@ main{
         border-bottom: 1px solid #e0e0e0;
         box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
         position: relative;
+        z-index: 25;
         .warpper{
             display: flex;
             justify-content: space-between;
@@ -30,8 +31,131 @@ main{
         }
     }
     #details_main{
+        display: flex;
         #details_show{
-            background-color: pink;
+            flex: 1;
+            z-index: 5;
+            position: relative;
+            .details_img{
+                position: absolute;
+                width: 560px;
+                height: 800px;
+                z-index: 2;
+                img{top: 0;left: 0;width: 100%;position: absolute;}
+            }
+            .control{
+                position: absolute;
+                z-index: 25;
+                width: 560px;
+                height: 560px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                >span{
+                    width: 40px;
+                    line-height: 70px;
+                    color: #ddd;
+                    text-align: center;
+                    font-size: 34px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #7f7f7f;
+                        color: #eee;
+                    }
+                    &:nth-child(2){
+                        transform: rotate(180deg);
+                    }
+                }
+                .details_toggle{
+                    width: 100%;
+                    height: 3px;
+                    z-index: 500;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    bottom: 20px;
+                    span{
+                        display: block;
+                        background-color: #d6d6d6;
+                        height: 100%;
+                        width: 50px;
+                        margin: 0 4px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #b5b5b5;
+                        }
+                        &.on{
+                            background-color: #a3a3a3;
+                        }
+                    }
+                }
+            }
+        }
+        #details_select{
+            flex: 1;
+            margin-left: 44px;
+            h3{
+                font-size: 26px;
+                line-height: 52px;
+            }
+            p.state{
+                color: #b0b0b0;
+                font-size: 14px;
+                span{color: @xiaomiColor;}
+            }
+            >em{
+                color: @xiaomiColor;
+                line-height: 46px;
+                font-size: 14px;
+            }
+            .products_prices{
+                padding-bottom: 20px;
+                border-bottom: 1px solid #e0e0e0;
+                em{color: @xiaomiColor;font-size: 18px;}
+                i{text-decoration:line-through;color: #aaa;font-size: 14px;margin-left: 3px;}
+            }
+            #user_addr{
+                background-color: #fafafa;
+                border: 1px solid #e0e0e0;
+                margin: 20px 0;
+                padding-left: 23px;
+                padding-top: 25px;
+                height: 75px;
+                span{color: #999;}
+                i{margin-left: 12px;}
+                #set_addr{color: @xiaomiColor;margin-left: 10px;}
+                .spot{
+                    display: block;
+                    color: @xiaomiColor;
+                    margin-left: 33px;
+                    line-height: 28px;
+                }
+            }
+            section{
+                h4{line-height: 50px;font-size: 20px;}
+                .item_select{
+                    display: flex;
+                    a{
+                        flex: 1;
+                        text-align: center;
+                        margin-bottom: 10px;
+                        line-height: 42px;
+                        color: #757575;
+                        border: 1px solid #e0e0e0;
+                        &:nth-of-type(even){
+                            margin-left: 12px;
+                        }
+                        &:hover{
+                            color: @xiaomiColor;
+                            border-color: @xiaomiColor;
+                        }
+                        &.on{
+                            color: @xiaomiColor;
+                            border-color: @xiaomiColor;
+                        }
+                    }
+                }
+            }
         }
     }
     #price_state{
