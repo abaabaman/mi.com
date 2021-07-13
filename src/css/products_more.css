@@ -1,0 +1,74 @@
+#products_more {
+  background-color: #f5f5f5;
+  padding-top: 38px;
+}
+#products_more h2 {
+  text-align: center;
+  display: block;
+  background-color: #f5f5f5;
+  color: #757575;
+  font-size: 30px;
+  width: 480px;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+}
+#products_more ul.screenshot {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#products_more ul.screenshot li {
+  width: calc(20% - 14px);
+  height: 300px;
+  background-color: white;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+#products_more ul.screenshot li img {
+  height: 120px;
+  margin-top: 15px;
+}
+#products_more ul.screenshot li p {
+  font-size: 16px;
+}
+#products_more ul.screenshot li p.products_name {
+  color: #333;
+  margin-top: 25px;
+}
+#products_more ul.screenshot li p.products_prices {
+  color: #ff6a00;
+  line-height: 42px;
+}
+#products_more ul.screenshot li p.products_description {
+  color: #757575;
+}
+#products_more ul.screenshot li:hover button {
+  opacity: 1;
+  bottom: 18px;
+}
+#products_more ul.screenshot li button {
+  line-height: 30px;
+  width: 120px;
+  opacity: 0;
+  background-color: white;
+  color: #ff6a00;
+  border: 1px solid #ff6a00;
+  position: absolute;
+  transition: all 0.3s;
+  bottom: -18px;
+  cursor: pointer;
+}
+#products_more ul.screenshot li button:hover {
+  background-color: #ff6a00;
+  color: white;
+}
