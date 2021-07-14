@@ -1,0 +1,68 @@
+INSERT INTO `products` ( `name`, `s_description`, `l_description`, `price`, `type`, `screenshot`, `description`) 
+VALUES (
+'Redmi AirDots 2真无线蓝牙耳机',
+'支持蓝牙5.0，自动秒连，拿起就能用', 
+'疾速秒连，戴上耳机就能用 / 蓝牙5.0技术 / 12小时长续航 / 单双耳模式无缝切换',
+'[79,99]', 
+'[{\"选择颜色\":\"黑色\"}]',
+'[{ "src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7d9e8308f5f55bfa69c5c7fadc7cb4aa.jpg", "alt": "small" }, \r\n    
+  { "src": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1594807763.78483029.jpg", "alt": "details-1" }, \r\n    
+  { "src": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1594807763.78315615.jpg", "alt": "details-2" }, \r\n    
+  { "src": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1594807763.77778793.jpg", "alt": "details-3" }, \r\n    
+  { "src": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1594807763.79089304.jpg", "alt": "details-4" }, \r\n    
+  { "src": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1594807763.78314885.jpg", "alt": "details-5" }]', 
+
+'[ {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aab1afcd7927bb030d6dab6dc22957bc.gif"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/713bc812ec3d357f0e2b20f9af5862c2.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/130d37051489003bd7661f20d66d6188.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c5a9ded49c69d3f23fae77bc617a63a0.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/50efdb5c49fcefc53aa918f728dbb488.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6feae97a5dbdd5928273d3868fac06b2.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e7ac031c468281f5cd9cd4745ab23871.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/db57f110ba84342634fa0a64cabd3014.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7069d4d690180b860566797428ca9be1.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/dbc188f13a9af6dcc400d27759c8e7be.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3738b2388dc2fd8cba4862bc4b0aa1be.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4b4551827a0a7012f7e66dda551bad9f.gif"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/493fcee17e1f125c005b960be7fdb54d.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cd8018942c7870e7b4d936bd661b6578.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/f4e34dc6f436506a2f55934452cf2f20.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7f7dd177f1463c5857c64605ef3513f3.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4dd1627e1ceb372ad3cfbe8b0a7d32ac.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2811016d534042ef4431e97b4549eaf8.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e99a84668a9d97a0fe20c056ca8539bf.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b2cd5faece3d364ed799ca7cb0eedd6d.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7433c6fe18127be856c68a47f2b28ea1.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/34c9ac936c0c38365ce7bc896b6b975b.jpg"},\r\n  
+   {"src": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7f4fb6d0fc3c42297fff8d07f1680749.jpg"}]');
+
+
+
+INSERT INTO `products` ( `name`, `s_description`, `l_description`, `price`, `type`, `screenshot`, `description`) 
+VALUES (
+'小米真无线蓝牙耳机Air 2s',
+'全面升级，智慧真无线', 
+'左右双主耳，同步传输，性能全面提升 / 智能语音唤醒 / 搭配充电盒使用，续航可达24小时 / 支持Qi标准无线充电',
+'[359,399]', 
+'[{\"选择颜色\":\"白色\"}]',
+'[{ \"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c6306bf6d8aede9f6f48d8e4d9256db2.jpg\", \"alt\": \"small\" }, \r\n    
+  { \"src\": \"https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1585639521.33045699.jpg\", \"alt\": \"details-1\" }, \r\n    
+  { \"src\": \"https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1585639521.37998821.jpg\", \"alt\": \"details-2\" }, \r\n    
+  { \"src\": \"https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1585639521.32771132.jpg\", \"alt\": \"details-3\" }, \r\n    
+  { \"src\": \"https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1585639521.354214.jpg\", \"alt\": \"details-4\" }, \r\n    
+  { \"src\": \"https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1585639521.32951960.jpg\", \"alt\": \"details-5\" }]', 
+'[ {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ba1267a5447f9636f3a4ab0b72eaa734.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b3b08233e756a0c9af87fac9a6f05a94.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a171e3b45624c59ee9d877eb0b350545.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/98cc679af3a1395e7bce68d1997a133b.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a43f9ba9b0cc42b4c8ab274cb704cb15.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4fbe2209c12dcc7e0a2525e141c4ecb8.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8e11a27aed9fb9c67b6b8c163837cb54.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/393391fa17d63a13bf5bc05c06ac87e6.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a723373f5445bd73d0ddd1f674125ff8.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/88ed06a656be69f5a2a86b57382e0425.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d4ac3190d97ab4edff887088470f7d2c.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aa8bcbf4326bf6b26ba351781aff56ca.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9e064728af79f9a43f1974cf46bfbcce.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/16a38bc416cf856bdef06ff584ac58ea.jpg\"},\r\n  
+   {\"src\": \"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/352a7e7edeb08e555429783d0a916d35.jpg\"}]');
