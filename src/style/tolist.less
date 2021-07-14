@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@xiaomiColor:#ff6a00;
+@box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+
+body{background-color: #f5f5f5;}
+@import url(./header.less);
+
+#submit{
+    height: 135px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .submit_txt{
+        display: flex;
+        >span{font-size: 65px;margin-right: 20px;position: relative;color: #84c64d;}
+        >span::after{content: '';display: block;width: 50px;height: 50px;background-color: white;border-radius: 50%;
+                     position: absolute;top: calc(50% - 25px);left: calc(50% - 25px);z-index: -5;}
+        p{display: flex;flex-flow: column;}
+        p span{font-size: 28px;color: #424242;margin-top: 10px;}
+        p em{font-size: 14px;color: #757575;line-height: 20px;}
+    }
+    .submit_btn a{
+        display: inline-block;
+        text-align: center;
+        width: 180px;
+        line-height: 40px;
+        font-size: 16px;
+        &:first-child{border: 1px solid #b0b0b0;color: #b0b0b0;margin-right: 15px;}
+        &:last-child{border: 1px solid @xiaomiColor;background-color: @xiaomiColor;color: #fff;}
+    }
+}
+
+@import url(./products_more.less);
+@import url(./footer.less);

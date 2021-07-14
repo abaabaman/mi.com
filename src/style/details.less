@@ -59,8 +59,9 @@ main{
                     width: 40px;
                     line-height: 70px;
                     color: #ddd;
+                    border-radius: 0 5px 5px 0;
                     text-align: center;
-                    font-size: 34px;
+                    font-size: 30px;
                     cursor: pointer;
                     &:hover{
                         background-color: #7f7f7f;
@@ -257,6 +258,7 @@ main{
                 border: none;
                 cursor: pointer;
                 color: white;
+                outline: none;
                 transition: background-color .3s;
                 &#add_list{
                     background-color: @xiaomiColor;margin-right: 10px;width: 300px;
@@ -277,9 +279,10 @@ main{
             }
         }
     }
+    // 详情部分
     .details_content{
         overflow: hidden;
-        img{margin-left: calc(50% - 1280px);}
+        img{margin-left: calc(50% - 613px);}
     } 
     // 底部说明
     #price_state{
