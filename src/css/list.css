@@ -178,24 +178,40 @@ header .warpper ul.user ul.sub_user a:hover {
   flex: 1;
   text-align: center;
 }
+#list li p.products_remove a {
+  display: inline-block;
+  text-align: center;
+  color: #333;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+#list li p.products_remove a:hover {
+  background-color: #e53935;
+  color: white;
+}
 #list li.list_title {
   line-height: 70px;
   height: 70px;
   font-size: 14px;
 }
 .settlement_list {
-  position: fixed;
-  bottom: -1px;
   width: 100%;
   z-index: 25;
   height: 50px;
   line-height: 45px;
+  padding-top: 20px;
+  background-color: #f5f5f5;
 }
 .settlement_list .warpper {
   display: flex;
   justify-content: space-between;
   background-color: #fafafa;
-  box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 .settlement_list .settlement_left {
   font-size: 14px;
