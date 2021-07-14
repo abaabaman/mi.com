@@ -1,8 +1,9 @@
 import $ from './library/jquery.js';
+import cookie from './library/cookie.js';
 
 $.ajax({
     type: "get",
-    url: "http://localhost/2105/mi.com/interface/getProducts.php",
+    url: "../../interface/getProducts.php",
     data: location.search.slice(1),
     dataType: "json",
 }).then((data)=>{
@@ -48,13 +49,30 @@ $.ajax({
     $('#details_top em').html(data.name);                                                       // 注入顶部商品标题
     $('#details_select h3').html(data.name);                                                    // 注入主体商品标题
     $('#details_select p.state').html(`<span>${state.discount}</span>${state.description}`);    // 注入商品描述
-    $('.products_prices ').html(`<em>${price[0]} 元</em><i>${price[1]} 元</i>`);                // 注入价格
-    $('div#products_select').html(productsSelect);                                              //注入型号
-    $('#total').html(total);                                                                    //注入价格小计
-    $('.details_img').html(details_img);                                                        //注入缩略图
-    $('.details_toggle').html(details_toggle)                                                   //注入缩略图控制块
-    $('.details_content').html(details_content)                                                 //注入详情页
-    
+    $('.products_prices ').html(`<em>${price[0]} 元</em><i>${price[1]} 元</i>`);                //注入价格
+    $('div#products_select').html(productsSelect);                                              // 注入型号
+    $('#total').html(total);                                                                    // 注入价格小计
+    $('.details_img').html(details_img);                                                        // 注入缩略图
+    $('.details_toggle').html(details_toggle)                                                   // 注入缩略图控制块
+    $('.details_content').html(details_content)                                                 // 注入详情页
+    $('#add_list').on('click',()=>{                                                             // 注入购物车
+        let key = '';
+        if(cookie.get('key')){
+            key += cookie.get('key');
+            let item =  JSON.parse(`[${key}]`);
+            
+            if(item.some((el,i)=>item[i].id = data.id)){
+                +item[i].num + 1
+            }else{
+                key += ','+(JSON.stringify({"id":data.id,"num":1}))
+            }
+        }else{
+            key = (JSON.stringify({"id":data.id,"num":1}));
+        }
+        cookie.set('key', key,1);
+        console.log(key);
+        // location.href = `../html/tolist.html?name=${data.name}&id=${data.id}`;
+    })
 
 }).catch((xhr)=>{
     console.log(xhr.state);
