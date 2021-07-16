@@ -1,6 +1,7 @@
-INSERT INTO `products` ( `name`, `s_description`, `l_description`, `price`, `type`, `screenshot`, `description`) 
+INSERT INTO `products` ( `name`, `class`, `s_description`, `l_description`, `price`, `type`, `screenshot`, `description`) 
 VALUES (
 'Redmi AirDots 2真无线蓝牙耳机',
+'headset',
 '支持蓝牙5.0，自动秒连，拿起就能用', 
 '[{"discount":"「享6期免息，信用卡分期至高立减80元，+1元得生生不息果冻包，购开学套餐赠米家台灯Lite，直播间下单享专属福利」",
   "description":"左右双主耳，同步传输，性能全面提升 / 智能语音唤醒 / 搭配充电盒使用，续航可达24小时 / 支持Qi标准无线充电"}]',
