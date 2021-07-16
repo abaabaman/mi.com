@@ -157,7 +157,7 @@ header .warpper ul.user ul.sub_user a:hover {
   position: relative;
   content: "✓";
   line-height: 14px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   background-color: hsl(25, 100%, 50%);
   border-color: hsl(25, 100%, 50%);
@@ -190,6 +190,8 @@ header .warpper ul.user ul.sub_user a:hover {
   font-weight: bold;
   border: 1px solid #e0e0e0;
   color: #757575;
+  cursor: pointer;
+  user-select: none;
   transition: background-color 0.3s;
 }
 #list li p.products_count a:hover {
@@ -288,6 +290,7 @@ header .warpper ul.user ul.sub_user a:hover {
   border: none;
   font-size: 20px;
   cursor: pointer;
+  outline: none;
 }
 .settlement_list .settlement_right button:hover {
   background-color: hsl(25, 100%, 45%);

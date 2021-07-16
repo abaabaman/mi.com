@@ -130,7 +130,7 @@ header{
                     position: relative;
                     content: "✓";
                     line-height: 14px;
-                    font-size: 10px;
+                    font-size: 12px;
                     font-weight: bold;
                     background-color: @xiaomiColor;
                     border-color: @xiaomiColor;
@@ -161,6 +161,8 @@ header{
                 font-weight: bold;
                 border: 1px solid #e0e0e0;
                 color: #757575;
+                cursor: pointer;
+                user-select: none;
                 transition: background-color .3s;
                 &:hover{background-color: #e0e0e0;}
             }
@@ -245,6 +247,7 @@ header{
             border: none;
             font-size: 20px;
             cursor: pointer;
+            outline: none;
             &:hover{background-color: darken(@xiaomiColor,5%)}
         }
     }
