@@ -77,7 +77,6 @@ $.ajax({
         console.log(key);
         location.href = `../html/tolist.html?name=${data.name}&id=${data.id}`;
     })
-
 }).catch((xhr)=>{
-    console.log(xhr.state);
+    console.log(xhr.status);
 });

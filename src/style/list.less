@@ -2,7 +2,7 @@
 
 @xiaomiColor:#ff6a00;
 @box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
-
+.none{display: none;}
 
 // 顶部购物车标题
 header{
@@ -58,6 +58,33 @@ header{
                         color: @xiaomiColor;
                     }
                 }
+            }
+        }
+    }
+}
+
+// 空购物车
+.empty_list{
+    background-color: #f5f5f5;
+    .warpper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 480px;
+        .empty_txt{
+            width: 550px;
+            margin-left: 80px;
+            h2{font-size: 36px;font-weight: bold;color: #b0b0b0;margin-bottom: 20px;}
+            p a{
+                display: inline-block;
+                text-align: center;
+                width: 170px;
+                line-height: 50px;
+                color: white;
+                background-color: @xiaomiColor;
+                border: 1px solid @xiaomiColor;
+                transition: all .3s;
+                &:hover{background-color: darken(@xiaomiColor,5%);border-color: darken(@xiaomiColor,5%);}
             }
         }
     }
@@ -175,10 +202,11 @@ header{
         line-height: 70px;
         height: 70px;
         font-size: 14px;
+        p{color: #424242}
     }
 }
 
-// 结算行
+// 结算
 .settlement_list{
     // position: fixed;
     // bottom: -1px;

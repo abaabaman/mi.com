@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/repeat.css">
     <link rel="stylesheet" href="../css/list.css">
     <link rel="stylesheet" href="../img/iconfont/iconfont.css">
+    <script src="../js/list.js" type="module"></script>
     <title>购物车</title>
 </head>
 <body>
@@ -33,39 +34,54 @@
         </div>
     </header>
 
+    <!-- 购物车（空） -->
+    <div class="empty_list none">
+        <div class="warpper">
+            <div class="empty_pic">
+                <img src="../img/cart-empty.png" alt="" srcset="">
+            </div>
+            <div class="empty_txt">
+                <h2>您的购物车还是空的!</h2>
+                <p><a href="../html/index.html">马上去购物</a></p>
+            </div>
+        </div>
+    </div>
+
     <!-- 购物车 -->
-    <ul id="list">
-        <li class="list_title warpper">
-            <p class="check"><input type="checkbox" name="" id="">全选</p>
-            <p class="screenshot"><img src="" alt=""></p>
-            <p class="products">商品名称</p>
-            <p class="products_prices">单价</p>
-            <p class="products_count">数量</p>
-            <p class="products_subtotal">小计</p>
-            <p class="products_remove">操作</p>
-        </li>
-        <li class="warpper">
-            <p class="check"><input type="checkbox" name="" id=""></p>
-            <p class="screenshot"><img src="../img/xiaomi01.png" alt=""></p>
-            <p class="products">米巨能写多彩中性笔</p>
-            <p class="products_prices">9.99元</p>
-            <p class="products_count"><a href="">-</a><input type="text" name="" id="" value="1"><a href="">+</a></p>
-            <p class="products_subtotal">9.99元</p>
-            <p class="products_remove"><a href="">×</a></p>
-        </li>
-        <li class="warpper">
-            <p class="check"><input type="checkbox" name="" id=""></p>
-            <p class="screenshot"><img src="../img/xiaomi01.png" alt=""></p>
-            <p class="products">米家天然乳胶护颈枕</p>
-            <p class="products_prices">159元</p>
-            <p class="products_count"><a href="">-</a><input type="text" name="" id="" value="1"><a href="">+</a></p>
-            <p class="products_subtotal">159元</p>
-            <p class="products_remove"><a href="">×</a></p>
-        </li>
-    </ul>
+    <div class="list_container none">
+        <ul id="list">
+            <li class="list_title warpper">
+                <p class="check"><input type="checkbox" name="" id="">全选</p>
+                <p class="screenshot"><img src="" alt=""></p>
+                <p class="products">商品名称</p>
+                <p class="products_prices">单价</p>
+                <p class="products_count">数量</p>
+                <p class="products_subtotal">小计</p>
+                <p class="products_remove">操作</p>
+            </li>
+            <li class="warpper">
+                <p class="check"><input type="checkbox" name="" id=""></p>
+                <p class="screenshot"><img src="../img/xiaomi01.png" alt=""></p>
+                <p class="products">米巨能写多彩中性笔</p>
+                <p class="products_prices">9.99元</p>
+                <p class="products_count"><a href="">-</a><input type="text" name="" id="" value="1"><a href="">+</a></p>
+                <p class="products_subtotal">9.99元</p>
+                <p class="products_remove"><a href="">×</a></p>
+            </li>
+            <li class="warpper">
+                <p class="check"><input type="checkbox" name="" id=""></p>
+                <p class="screenshot"><img src="../img/xiaomi01.png" alt=""></p>
+                <p class="products">米家天然乳胶护颈枕</p>
+                <p class="products_prices">159元</p>
+                <p class="products_count"><a href="">-</a><input type="text" name="" id="" value="1"><a href="">+</a></p>
+                <p class="products_subtotal">159元</p>
+                <p class="products_remove"><a href="">×</a></p>
+            </li>
+        </ul>
+    </div>
 
     <!-- 结算 -->
-    <div class="settlement_list warpper">
+    <div class="settlement_list warpper none">
         <div class="warpper">
             <p class="settlement_left">
                 <a href="">继续购物</a><i>|</i>
