@@ -3,6 +3,24 @@ import cookie from './library/cookie.js';
 let getlist = cookie.get('key')
 let getListObj = JSON.parse(`[${getlist}]`)
 
+let total = function(){     // 计算总价
+    let total = 0;
+    let cont = 0;
+    let all = 0;
+    $('.products_subtotal').each((i,el)=>{
+        if(el.innerHTML!='小计'){
+            if(el.parentNode.children[0].children[0].checked){
+                total += parseFloat(el.innerHTML);
+                cont ++;
+            }
+            all ++;
+        }
+    });
+    $('#total').html(total);
+    $('p.settlement_left span>em:first-child').html(all);
+    $('p.settlement_left span>em:last-child').html(cont);
+}
+
 if(!getlist){
     $('.empty_list').removeClass('none')
 }else{
@@ -37,6 +55,8 @@ if(!getlist){
         })
         // 商品注入购物车
         $('#list').html(function(i,elm){return elm+innerUl})
+        // 计价
+        total();
         // 商品数量增减
         $('.products_count a').on('click',(el)=>{
             let click = el.target.getAttribute('value').split(',');
@@ -53,17 +73,15 @@ if(!getlist){
                     }
                     break;
             }
+            // 单项商品合计
             el.target.parentNode.parentNode.children[5].innerHTML = el.target.parentNode.children[1].value * el.target.parentNode.parentNode.children[3].innerHTML.slice(0,-1) +'元';
+            // 上传cookie
             cookie.set('key', JSON.stringify(getListObj).slice(1,-1),1)
-            let total = 0;
-            $('.products_subtotal').each((i,el)=>{
-                if(el.innerHTML!='小计'){
-                    console.log(el.innerHTML);
-                    total += parseFloat(el.innerHTML)
-                }
-            });
-            $('#total').html(total)
+            // 合计
+            total();
         });
+        // 勾选商品
+        $('p.check input').on('change',e=>total())
         
         
     }).catch((xhr)=>{
