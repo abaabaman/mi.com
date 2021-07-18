@@ -1,3 +1,7 @@
+INSERT INTO `users` (`name`, `caseword`, `phone`, `frequency`) VALUES ('锤石', 'qqq', '110', '1');
+
+
+
 INSERT INTO `products` ( `name`, `class`, `s_description`, `l_description`, `price`, `type`, `screenshot`, `description`) 
 VALUES (
 'Redmi AirDots 2真无线蓝牙耳机',

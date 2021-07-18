@@ -23,3 +23,6 @@ $.ajax({
     console.log(xhr.state)
 });
 
+$('li.toList').on('click',()=>{
+    location.href = '../html/list.html'
+})

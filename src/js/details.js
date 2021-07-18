@@ -80,3 +80,7 @@ $.ajax({
 }).catch((xhr)=>{
     console.log(xhr.status);
 });
+
+$('img.logo').on('click',()=>{
+    location.href = '../html/'
+})

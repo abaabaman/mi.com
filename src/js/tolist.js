@@ -11,3 +11,7 @@ $('.submit_txt em').html(decodeURI(data[0][1]));
 $('#back').on('click',()=>{
     location.href = `../html/details.html?id=${data[1][1]}`;
 })
+
+$('img.logo').on('click',()=>{
+    location.href = '../html/'
+})

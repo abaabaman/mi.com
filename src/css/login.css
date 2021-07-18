@@ -207,6 +207,9 @@ body main #loginbar #login_toggle i {
   border-radius: 2px;
   background-color: #ff6a00;
 }
+body main #loginbar #login_toggle i.right {
+  margin-left: 65px;
+}
 body main #loginbar form {
   text-align: center;
 }
@@ -225,8 +228,8 @@ body main #loginbar form select {
   padding-top: 20px;
   font-size: 16px;
 }
-body main #loginbar form input[type='submit'],
-body main #loginbar form select[type='submit'] {
+body main #loginbar form input[type='button'],
+body main #loginbar form select[type='button'] {
   background-color: #ffbe99;
   color: white;
   padding: 0;
@@ -234,8 +237,8 @@ body main #loginbar form select[type='submit'] {
   line-height: 60px;
   transition: background-color 0.3s;
 }
-body main #loginbar form input[type='submit']:hover,
-body main #loginbar form select[type='submit']:hover {
+body main #loginbar form input[type='button']:hover,
+body main #loginbar form select[type='button']:hover {
   background-color: #ffcba9;
 }
 body main #loginbar form select {
@@ -379,18 +382,30 @@ body main #loginbar form > div #phone_form span:nth-of-type(3) {
 }
 body main #loginbar form > div:focus-within input,
 body main #loginbar form > div:focus-within .phone_number input,
+body main #loginbar form > div .input input,
 body main #loginbar form > div:focus-within select,
-body main #loginbar form > div:focus-within .phone_number select {
+body main #loginbar form > div:focus-within .phone_number select,
+body main #loginbar form > div .input select {
   background-color: white;
   border: 1px solid #ff5c00;
   box-shadow: 0 0 0 1px #f9f9f9;
   box-shadow: 0 0 0 2px #fcf2f3;
 }
 body main #loginbar form > div:focus-within span:nth-of-type(1),
-body main #loginbar form > div:focus-within .phone_number span:nth-of-type(1) {
+body main #loginbar form > div:focus-within .phone_number span:nth-of-type(1),
+body main #loginbar form > div .input span:nth-of-type(1) {
   font-size: 12px;
   line-height: 35px;
   color: #aaa;
+}
+body main #loginbar form > div span.input {
+  font-size: 12px;
+  line-height: 35px;
+  color: #aaa;
+}
+body main #loginbar form > div input.err,
+body main #loginbar form > div select.err {
+  background-color: #fcf2f3;
 }
 body main #loginbar form > p {
   display: flex;
@@ -427,9 +442,6 @@ body main #loginbar form #agree i {
 body main #loginbar form #agree i:active {
   background-color: #ff6a00;
   color: white;
-}
-body main #loginbar form:nth-of-type(2) {
-  display: none;
 }
 body main #loginbar #more_type {
   position: absolute;

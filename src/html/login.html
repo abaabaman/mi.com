@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/repeat.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../img/iconfont/iconfont.css">
+    <script src="../js/login.js" type="module"></script>
     <title>登录</title>
 </head>
 <body>
@@ -33,9 +34,9 @@
         <!-- 登录/注册窗 -->
         <div id="loginbar">
             <div id="type_toggle"><span class="iconfont icon-gouwuchekong"></span><div class="title">扫码登录</div></div>
-            <div id="login_toggle"><a href="" class="on">登录</a><a href="">注册</a><i></i></div>
+            <div id="login_toggle"><a href="" class="">登录</a><a href="" class="">注册</a><i class="right"></i></div>
             <!-- 登录页表单 -->
-            <form action="#" id="login">
+            <form action="#" id="login" class="none">
                 <div class="username">
                     <input type="text" name="username">
                     <span>邮箱/手机号/小米ID</span>
@@ -51,10 +52,10 @@
                 <p><a href="">忘记密码？</a><a href="">手机号登录</a></p>
             </form>
             <!-- 注册页表单 -->
-            <form action="#" id="register">
+            <form id="register" class="none">
                 <div class="addr">
-                    <select name="addr" id="">
-                        <option value="">中国</option>
+                    <select name="addr" id="addr">
+                        <option value="0">中国</option>
                     </select>
                     <div class="title"><span class="iconfont icon-gouwuchekong"></span><span>系统会根据您选择的国家/地区的法律法规存储您的个人信息</span></div>
                     <span>国家/地区</span>
@@ -63,26 +64,26 @@
                 <div class="phone">
                     <div id="phone_form">
                         <div class="prefix">
-                            <select name="prefix" id="">
-                                <option value="">+86</option>
+                            <select name="prefix" id="prefix">
+                                <option value="86">+86</option>
                             </select>
                             <span>国家码</span>
                             <span class="iconfont icon-gouwuchekong"></span>
                         </div>
                         <div class="phone_number">
-                            <input type="text" name="phone">
+                            <input type="text" name="phone" id="phone_number">
                             <span>手机号</span>
                         </div>
                     </div>
                     <p>请输入手机号码</p>
                 </div>
                 <div class="code">
-                    <input type="text" name="code">
-                    <span>短信验证码</span>
-                    <a href="">获取验证码</a>
+                    <input type="text" name="code" id="code">
+                    <span>密码</span>
+                    <a href="">获取密码</a>
                     <p>请输入短信验证码</p>
                 </div>
-                <input type="submit" id="register_btn" value="注册">
+                <input type="button" id="register_btn" value="注册">
                 <p><a href="">收不到验证码？</a></p>
                 <span id="agree"><i class="iconfont icon-gouwuchekong"></i>已阅读并同意小米帐号 <a href=""> 用户协议 </a> 和 <a href=""> 隐私政策 </a></span>
             </form>

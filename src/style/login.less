@@ -198,6 +198,8 @@ body{
                     margin-top: 2px;
                     border-radius: 2px;
                     background-color: @xiaomiColor;
+                    
+                    &.right{margin-left: 65px;}
                 }
             }
             form{
@@ -215,7 +217,7 @@ body{
                     outline: 1px solid transparent;
                     padding-top: 20px;
                     font-size: 16px;
-                    &[type='submit']{
+                    &[type='button']{
                         background-color: #ffbe99;
                         color: white;
                         padding: 0;
@@ -366,7 +368,7 @@ body{
                             color: #959595;
                         }
                     }
-                    &:focus-within,&:focus-within .phone_number{
+                    &:focus-within,&:focus-within .phone_number,.input{
                         input,select{
                             background-color: white;
                             border: 1px solid #ff5c00;
@@ -378,7 +380,14 @@ body{
                             line-height: 35px;
                             color: #aaa;
                         }
-                        
+                    }
+                    span.input{
+                        font-size: 12px;
+                        line-height: 35px;
+                        color: #aaa;
+                    }
+                    input.err,select.err{
+                        background-color: #fcf2f3;
                     }
                 }
                 >p{
@@ -413,9 +422,6 @@ body{
                     }
 
                 }
-            }
-            form:nth-of-type(2){
-                .none
             }
             #more_type{
                 position: absolute;
