@@ -24,10 +24,11 @@ let regPrefix = $('#register .Prefix')          // 电话前缀
 
 let regPhone = $('#register .phone_number')     // 电话号码
 let phoneType = /^(?:(?:\+|00)86)?1\d{10}$/     // 号码格式检测
-let phoneTypeXrr = $('#phoneTypeXrr')           // 号码格式错误
+let phoneTypeErr = $('#phoneTypeErr')           // 号码格式错误
 let phoneNone = $('#phoneNone')                 // 号码没填
 
 let regCode                                     // 密码
+let codeNone = $('#codeNone')                   // 密码没填
 
 // 手机号
 $('#register #phone_number').on('blur',()=>{
@@ -43,20 +44,21 @@ $('#register #phone_number').on('blur',()=>{
     }
 })
 $('#register #phone_number').on('change',()=>{
-
-    phoneTypeXrr.addClass('none');
+    phoneTypeErr.addClass('none');
     regPhone.children('input').removeClass('err');
 })
 
 // 密码
 $('#register #code').on('blur',()=>{
-    regPhone = $('#register .code')
-    if(regPhone.children('input').val()){
-        regPhone.children('span').addClass('input')
-        regPhone.children('input').removeClass('err')
+    regCode = $('#register .code')
+    if(regCode.children('input').val()){
+        regCode.children('span').addClass('input')
+        regCode.children('input').removeClass('err')
+        codeNone.addClass('none');
     }else{
-        regPhone.children('span').removeClass('input')
-        regPhone.children('input').addClass('err')
+        regCode.children('span').removeClass('input')
+        regCode.children('input').addClass('err')
+        codeNone.removeClass('none');
     }
 })
 
@@ -68,11 +70,10 @@ $('#register_btn').on('click',()=>{
     regPhoneVal =  $('#register #phone_number').val()      // 电话号码的值
     regCodeVal =  $('#register #code').val()               // 密码的值
 
-
     if(!regPhoneVal.match(phoneType)){
         console.log('1了1了');
         regPhone.children('input').addClass('err')
-        phoneTypeXrr.removeClass('none');
+        phoneTypeErr.removeClass('none');
         return
     }
 
@@ -80,10 +81,17 @@ $('#register_btn').on('click',()=>{
         type: "get",
         url: "../../interface/addUser.php",
         data: `regAddr=${regAddrVal}&regPrefix=${regPrefixVal}&regPhone=${regPhoneVal}&regCode=${regCodeVal}`,
-        // dataType: "dataType",
     }).then((data)=>{
         console.log(data);
-    }).catch((xrr)=>{
-        console.log(xrr.status);
+        if(data == 'repeat'){
+            let btn = confirm('你已注册过，是否直接登录');
+            if(btn){
+                location.href = '../html/index.html';
+            }else{
+                location.reload();
+            }
+        }
+    }).catch((err)=>{
+        console.log(err.status);
     });
 })
